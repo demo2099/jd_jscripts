@@ -1,12 +1,13 @@
 /*
 京东京喜工厂
+cron 15 * * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
  */
 
 
 const $ = new Env('京喜工厂');
 const JD_API_HOST = 'https://m.jingxi.com';
 
-let ele, factoryId;
+let ele, factoryId, productionId;
 
 let message = '', subTitle = '', option = {};
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -63,17 +64,11 @@ if ($.isNode()) {
     $.done();
   })
 
-function msleep(n) {
-  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
-}
-
-function sleep(n) {
-  msleep(n * 1000);
-}
 
 async function jdDreamFactory() {
   ele = 0;
   await userInfo();
+  if ($.unActive) return
   await getUserElectricity();
   await taskList();
   await investElectric();
@@ -178,7 +173,7 @@ function taskList() {
                 if (vo.completedTimes >= vo.targetTimes) {
                   console.log(`任务：${vo.description}可完成`)
                   await completeTask(vo.taskId, vo.taskName)
-                  sleep(1);
+                  await $.wait(1000);//延迟等待一秒
                 } else {
                   switch (vo.taskType) {
                     case 2: // 逛一逛任务
@@ -188,7 +183,7 @@ function taskList() {
                         console.log(`去做任务：${vo.taskName}`)
                         await doTask(vo.taskId)
                         await completeTask(vo.taskId, vo.taskName)
-                        sleep(1);
+                        await $.wait(1000);//延迟等待一秒
                       }
                       break
                     case 4: // 招工
@@ -404,7 +399,9 @@ function userInfo() {
           console.log(`生产进度：${(production.investedElectric / production.needElectric).toFixed(2) * 100}%`);
           message += `【生产进度】${((production.investedElectric / production.needElectric) * 100).toFixed(2)}%\n`;
         } else {
-          console.log('【提示】此账号京喜工厂活动未开始\n请手动去京东APP->游戏与互动->查看更多->京喜工厂 开启活动\n')
+          $.unActive = true;//标记是否开启了此活动
+          console.log('【提示】此账号京喜工厂活动未开始\n请手动去京东APP->游戏与互动->查看更多->京喜工厂 开启活动\n');
+          $.msg($.name, '', `【提示】此账号[${$.nickName}]京喜工厂活动未开始\n请手动去京东APP->游戏与互动->查看更多->京喜工厂 开启活动`);
         }
       }
       resolve()
