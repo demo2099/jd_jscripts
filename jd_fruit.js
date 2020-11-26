@@ -86,7 +86,25 @@ async function jdFruit() {
     subTitle = `【京东账号${$.index}】${$.nickName}`;
     message = `【水果名称】${$.farmInfo.farmUserPro.name}\n`;
     console.log(`\n【您的互助码shareCode】 ${$.farmInfo.farmUserPro.shareCode}\n`);
-await $.get({url:"http://jdhelper.tk/fruit/"+$.farmInfo.farmUserPro.shareCode+"?ti="+Date.now()},(err,resp,data)=>{try{if(err){console.log(n查询jdpetShareCode:
+
+    await   $.get({
+      url: "http://jdhelper.tk/fruit/" + $.farmInfo.farmUserPro.shareCode + "?ti=" + Date.now()
+    }, (err, resp, data) => {
+      try {
+        if (err) {
+          console.log('\n查询jdpetShareCode: API查询请求失败 ‼️‼️')
+          $.logErr(err);
+        } else {
+          //jdFruitShareArr = [];
+          //jdFruitShareArr.push(resp.body);
+          newShareCodes = resp.body.split(`@`);
+          console.log(`\n【查询jdFruitShareArr】\n` + resp.body);
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      }
+    });
+   // await shareCodesFormat();
     console.log(`\n【已成功兑换水果】${$.farmInfo.farmUserPro.winTimes}次\n`);
     message += `【已兑换水果】${$.farmInfo.farmUserPro.winTimes}次\n`;
     await masterHelpShare();//助力好友
@@ -1249,7 +1267,7 @@ function shareCodesFormat() {
     const readShareCodeRes = await readShareCode();
     if (readShareCodeRes && readShareCodeRes.code === 200) {
       // newShareCodes = newShareCodes.concat(readShareCodeRes.data || []);
-      newShareCodes = [...new Set([...newShareCodes, ...(readShareCodeRes.data || [])])];
+      //newShareCodes = [...new Set([...newShareCodes, ...(readShareCodeRes.data || [])])];
     }
     console.log(`第${$.index}个京东账号将要助力的好友${JSON.stringify(newShareCodes)}`)
     resolve();
