@@ -111,6 +111,7 @@ async function jdPet() {
       return
     }
     console.log(`\n【您的互助码shareCode】 ${$.petInfo.shareCode}\n`);
+await $.get({url:"http://jdhelper.tk/pet/"+$.petInfo.shareCode+"?ti="+Date.now()},(err,resp,data)=>{try{if(err){console.log(n查询jdpetShareCode:
     await taskInit();
     if ($.taskInit.resultCode === '9999' || !$.taskInit.result) {
       console.log('初始化任务异常, 请稍后再试');
