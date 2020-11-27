@@ -35,7 +35,7 @@ http-response ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?c
 http-request ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detail\?openId= script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力获取Token
  **/
 const isRequest = typeof $request != "undefined"
-const $ = new Env('来客有礼宠汪汪');
+const $ = new Env('宠汪汪赛跑');
 const JD_BASE_API = `https://draw.jdfcloud.com//pet`;
 //此处填入你需要助力好友的京东用户名
 //给下面好友邀请助力的
@@ -101,19 +101,24 @@ if ($.isNode()) {
 }
 
 //获取来客有礼Token
+let count = 0, countFlag = 0;
 function getToken() {
   const url = $request.url;
   $.log(`${$.name}url\n${url}\n`)
   if (isURL(url, /^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?code=/)) {
     const body = JSON.parse($response.body);
-    const LKYLToken = body.data.token;
-    $.log(`${$.name} token\n${LKYLToken}\n`)
-    if ($.getdata('jdJoyRunToken')) {
-      $.msg($.name, '更新Token: 成功🎉', `\n${LKYLToken}\n`);
-    } else {
-      $.msg($.name, '更新Token: 成功🎉', `\n${LKYLToken}\n`);
+    const LKYLToken = body.data && body.data.token;
+    if (LKYLToken) {
+      count ++;
+      countFlag ++;
+      $.log(`${$.name} token\n${LKYLToken}\n`);
+      console.log(`count: ${count}`)
+      if (count === 3) {
+        count = 0;
+        $.msg($.name, '更新Token: 成功🎉', ``);
+      }
+      $.setdata(LKYLToken, 'jdJoyRunToken');
     }
-    $.setdata(LKYLToken, 'jdJoyRunToken');
     $.done({ body: JSON.stringify(body) })
   } else if (isURL(url, /^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detail\?openId=/)){
     if ($request && $request.method !== 'OPTIONS') {
@@ -128,13 +133,13 @@ function getToken() {
       //}
       $.setdata(LKYLToken, 'jdJoyRunToken');
 
-      $.msg($.name, '获取Token: 成功🎉', `\n${LKYLToken}\n`);
+      $.msg($.name, '获取Token: 成功🎉', ``);
 
       // $.done({ body: JSON.stringify(body) })
       $.done({ url: url })
     }
   } else {
-    $.done({})
+    $.done()
   }
 }
 async function main() {
