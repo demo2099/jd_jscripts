@@ -99,9 +99,9 @@ function getNodeCookie() {
   if ($.isNode()) {
     let QQ_READ_HEADER_VAL = [], QQ_READ_TIME_URL_VAL = [], QQ_READ_TIME_HEADER_VAL = [];
     if (process.env.QQ_READ_HEADER_VAL) {
-      if (process.env.QQ_READ_HEADER_VAL.indexOf('&') > -1) {
-        console.log(`您的QQ_READ_HEADER_VAL选择的是用&隔开\n`)
-        QQ_READ_HEADER_VAL = process.env.QQ_READ_HEADER_VAL.split('&');
+      if (process.env.QQ_READ_HEADER_VAL.indexOf('@') > -1) {
+        console.log(`您的QQ_READ_HEADER_VAL选择的是用@隔开\n`)
+        QQ_READ_HEADER_VAL = process.env.QQ_READ_HEADER_VAL.split('@');
       } else if (process.env.QQ_READ_HEADER_VAL.indexOf('\n') > -1) {
         console.log(`您的QQ_READ_HEADER_VAL选择的是用换行隔开\n`)
         QQ_READ_HEADER_VAL = process.env.QQ_READ_HEADER_VAL.split('\n');
@@ -109,11 +109,12 @@ function getNodeCookie() {
         QQ_READ_HEADER_VAL = [process.env.QQ_READ_HEADER_VAL];
       }
       // QQ_READ_HEADER_VAL = [...new Set(QQ_READ_HEADER_VAL)]
+      // $.log(QQ_READ_HEADER_VAL)
     }
     if (process.env.QQ_READ_TIME_URL_VAL) {
-      if (process.env.QQ_READ_TIME_URL_VAL.indexOf('&') > -1) {
-        console.log(`您的QQ_READ_TIME_URL_VAL选择的是用&隔开\n`)
-        QQ_READ_TIME_URL_VAL = process.env.QQ_READ_TIME_URL_VAL.split('&');
+      if (process.env.QQ_READ_TIME_URL_VAL.indexOf('@') > -1) {
+        console.log(`您的QQ_READ_TIME_URL_VAL选择的是用@隔开\n`)
+        QQ_READ_TIME_URL_VAL = process.env.QQ_READ_TIME_URL_VAL.split('@');
       } else if (process.env.QQ_READ_HEADER_VAL.indexOf('\n') > -1) {
         console.log(`您的QQ_READ_TIME_URL_VAL选择的是用换行隔开\n`)
         QQ_READ_TIME_URL_VAL = process.env.QQ_READ_TIME_URL_VAL.split('\n');
@@ -123,9 +124,9 @@ function getNodeCookie() {
       // QQ_READ_TIME_URL_VAL = [...new Set(QQ_READ_TIME_URL_VAL)]
     }
     if (process.env.QQ_READ_TIME_HEADER_VAL) {
-      if (process.env.QQ_READ_TIME_HEADER_VAL.indexOf('&') > -1) {
-        console.log(`您的QQ_READ_TIME_HEADER_VAL选择的是用&隔开\n`)
-        QQ_READ_TIME_HEADER_VAL = process.env.QQ_READ_TIME_HEADER_VAL.split('&');
+      if (process.env.QQ_READ_TIME_HEADER_VAL.indexOf('@') > -1) {
+        console.log(`您的QQ_READ_TIME_HEADER_VAL选择的是用@隔开\n`)
+        QQ_READ_TIME_HEADER_VAL = process.env.QQ_READ_TIME_HEADER_VAL.split('@');
       } else if (process.env.QQ_READ_TIME_HEADER_VAL.indexOf('\n') > -1) {
         console.log(`您的QQ_READ_TIME_HEADER_VAL选择的是用换行隔开\n`)
         QQ_READ_TIME_HEADER_VAL = process.env.QQ_READ_TIME_HEADER_VAL.split('\n');
@@ -143,6 +144,7 @@ function getNodeCookie() {
         "qqreadtimeheaderVal": QQ_READ_TIME_HEADER_VAL[i] || ""
       })
     }
+    // console.log(`${JSON.stringify(QQ_READ_COOKIES)}`)
   }
 }
 //CK运行
@@ -196,6 +198,7 @@ function GetCookie() {
 }
 async function QQ_READ() {
   for (let item of QQ_READ_COOKIES) {
+    tz = '';
     if (!item["qqreadheaderVal"] || !item['qqreadtimeurlVal'] || !item['qqreadtimeheaderVal']) {
       $.log(`账号暂未提供脚本执行所需的cookie`);
       continue
@@ -474,7 +477,7 @@ function qqreadtime() {
     };
 
     $.get(toqqreadtimeurl, (error, response, data) => {
-      if (logs) $.log(`${jsname}, 阅读时长: ${data}`)
+      if (logs) $.log(`${jsname}, qqreadtime-阅读时长: ${data}`)
       let time = JSON.parse(data)
       if (time && time.code == 0) tz += '【阅读时长】:上传' + TIME / 6 + '分钟\n'
       resolve()
@@ -503,6 +506,7 @@ function qqreadssr1() {
         resolve()
       })
     }
+    resolve()
   })
 }
 
