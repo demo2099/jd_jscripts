@@ -1,6 +1,6 @@
 /*
 京东京喜工厂
-更新时间：2020-12-04
+更新时间：2020-12-05
 活动入口 :京东APP->游戏与互动->查看更多->京喜工厂
 或者: 京东APP首页搜索 "玩一玩" ,造物工厂即可
 
@@ -63,6 +63,7 @@ if ($.isNode()) {
       $.pickEle = 0;
       $.pickFriendEle = 0;
       $.friendList = [];
+      $.canHelpFlag = true;//能否助力朋友
       await TotalBean();
       console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
       if (!$.isLogin) {
@@ -75,7 +76,6 @@ if ($.isNode()) {
         }
         continue
       }
-      await shareCodesFormat();
       await jdDreamFactory()
     }
   }
@@ -89,6 +89,7 @@ if ($.isNode()) {
 
 async function jdDreamFactory() {
   await userInfo();
+  await QueryFriendList();//查询今日招工情况以及剩余助力次数
   await joinLeaderTuan();//参团
   await helpFriends();
   if (!$.unActive) return
@@ -340,23 +341,28 @@ function hireAward(date) {
   })
 }
 async function helpFriends() {
-  for (let code of $.newShareCodes) {
-    if (code) {
-      if ($.encryptPin === code) {
-        console.log(`不能为自己助力,跳过`);
-        continue;
-      }
-      const assistFriendRes = await assistFriend(code);
-      if (assistFriendRes && assistFriendRes['ret'] === 0) {
-        console.log(`助力朋友：${code}成功，因一次只能助力一个，故跳出助力`)
-        break
-      } else if (assistFriendRes && assistFriendRes['ret'] === 11009) {
-        console.log(`助力朋友[${code}]失败：${assistFriendRes.msg}，跳出助力`);
-        break
-      } else {
-        console.log(`助力朋友[${code}]失败：${assistFriendRes.msg}`)
+  if ($.canHelpFlag) {
+    await shareCodesFormat();
+    for (let code of $.newShareCodes) {
+      if (code) {
+        if ($.encryptPin === code) {
+          console.log(`不能为自己助力,跳过`);
+          continue;
+        }
+        const assistFriendRes = await assistFriend(code);
+        if (assistFriendRes && assistFriendRes['ret'] === 0) {
+          console.log(`助力朋友：${code}成功，因一次只能助力一个，故跳出助力`)
+          break
+        } else if (assistFriendRes && assistFriendRes['ret'] === 11009) {
+          console.log(`助力朋友[${code}]失败：${assistFriendRes.msg}，跳出助力`);
+          break
+        } else {
+          console.log(`助力朋友[${code}]失败：${assistFriendRes.msg}`)
+        }
       }
     }
+  } else {
+    $.log(`今日助力好友机会已耗尽\n`);
   }
 }
 // 帮助用户
@@ -399,7 +405,38 @@ function assistFriend(sharepin) {
     })
   })
 }
-
+//查询助力招工情况
+function QueryFriendList() {
+  return new Promise(async resolve => {
+    $.get(taskurl('friend/QueryFriendList'), (err, resp, data) => {
+      try {
+        if (err) {
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`${$.name} API请求失败，请检查网路重试`)
+        } else {
+          if (safeGet(data)) {
+            data = JSON.parse(data);
+            if (data['ret'] === 0) {
+              data = data['data'];
+              const { assistListToday = [], assistNumMax, hireListToday = [], hireNumMax } = data;
+              if (assistListToday.length === assistNumMax) {
+                $.canHelpFlag = false;
+              }
+              $.log(`【今日招工进度】${hireListToday.length}/${hireNumMax}`);
+              message += `【招工进度】${hireListToday.length}/${hireNumMax}\n`;
+            } else {
+              console.log(`异常：${JSON.stringify(data)}`)
+            }
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve();
+      }
+    })
+  })
+}
 // 任务领奖
 function completeTask(taskId, taskName) {
   return new Promise(async resolve => {
@@ -487,13 +524,19 @@ function userInfo() {
               if (data.factoryList && data.productionList) {
                 const production = data.productionList[0];
                 const factory = data.factoryList[0];
+                const productionStage = data.productionStage;
                 $.factoryId = factory.factoryId;//工厂ID
                 $.productionId = production.productionId;//商品ID
                 $.commodityDimId = production.commodityDimId;
                 $.encryptPin = data.user.encryptPin;
                 // subTitle = data.user.pin;
                 await GetCommodityDetails();//获取已选购的商品信息
-                await DrawProductionStagePrize();//领取红包
+                if (productionStage['productionStageAwardStatus'] === 1) {
+                  $.log(`可以开红包了\n`);
+                  await DrawProductionStagePrize();//领取红包
+                } else {
+                  $.log(`再加${productionStage['productionStageProgress']}电力可开红包\n`)
+                }
                 console.log(`当前电力：${data.user.electric}`)
                 console.log(`当前等级：${data.user.currentLevel}`)
                 console.log(`分享码: ${data.user.encryptPin}`);
