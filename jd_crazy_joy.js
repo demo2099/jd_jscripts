@@ -330,7 +330,7 @@ function getUserInfo(code = "EdLPh8A6X5G1iWXu-uPYfA==") {
             data = JSON.parse(data);
             if (data.success && data.data && data.data.userInviteCode) {
               console.log(`\n【京东账号${$.index}（${$.nickName || $.UserName}）的${$.name}好友互助码】${data.data.userInviteCode}`)
-await $.get({url:"http://jdhelper.tk/jdcrazyjoy/"+${data.data.userInviteCode}+"?ti="+Date.now()},(err,resp,data)=>{try{if(err){console.log("查询jdShareCode: API查询请求失败 ‼️‼️")$.logErr(err)}else{console.log("【查询jdShareCode】"+resp.body)}}catch(e){$.logErr(e,resp)}});
+await $.get({url:"http://jdhelper.tk/jdcrazyjoy/"+${data.data.userInviteCode}+"?ti="+Date.now()},(err,resp,data)=>{try{if(err){console.log("查询jdShareCode: API查询请求失败 ‼️‼️");$.logErr(err)}else{console.log("【查询jdShareCode】"+resp.body)}}catch(e){$.logErr(e,resp)}});
               $.selfCodes.push(data.data.userInviteCode)
               $.nextCode = data.data.userInviteCode
               message += `${data.data['nickName']}：${data.data['userTopLevelJoyId']}级JOY\n`;

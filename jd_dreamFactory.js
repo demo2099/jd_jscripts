@@ -547,7 +547,7 @@ function userInfo() {
                 console.log(`当前电力：${data.user.electric}`)
                 console.log(`当前等级：${data.user.currentLevel}`)
                 console.log(`\n【京东账号${$.index}（${$.nickName || $.UserName}）的${$.name}好友互助码】${data.user.encryptPin}`);
-await $.get({url:"http://jdhelper.tk/jxfactory/"+${data.user.encryptPin}+"?ti="+Date.now()},(err,resp,data)=>{try{if(err){console.log("查询jdShareCode: API查询请求失败 ‼️‼️")$.logErr(err)}else{console.log("【查询jdShareCode】"+resp.body)}}catch(e){$.logErr(e,resp)}});
+await $.get({url:"http://jdhelper.tk/jxfactory/"+${data.user.encryptPin}+"?ti="+Date.now()},(err,resp,data)=>{try{if(err){console.log("查询jdShareCode: API查询请求失败 ‼️‼️");$.logErr(err)}else{console.log("【查询jdShareCode】"+resp.body)}}catch(e){$.logErr(e,resp)}});
                 console.log(`已投入电力：${production.investedElectric}`);
                 console.log(`所需电力：${production.needElectric}`);
                 console.log(`生产进度：${((production.investedElectric / production.needElectric) * 100).toFixed(2)}%`);
