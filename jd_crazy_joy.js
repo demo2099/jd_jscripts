@@ -33,8 +33,8 @@ let helpSelf = false // 循环助力，默认关闭
 let applyJdBean = 0
 let cookiesArr = [], cookie = '', message = '';
 const inviteCodes = [
-  'EdLPh8A6X5G1iWXu-uPYfA==@0gUO7F7N-4HVDh9mdQC2hg==@fUJTgR9z26fXdQgTvt_bgqt9zd5YaBeE@nCQQXQHKGjPCb7jkd8q2U-aCTjZMxL3s@2boGLV7TonMex8-nrT6EGat9zd5YaBeE',
-  'EdLPh8A6X5G1iWXu-uPYfA==@0gUO7F7N-4HVDh9mdQC2hg==@fUJTgR9z26fXdQgTvt_bgqt9zd5YaBeE@nCQQXQHKGjPCb7jkd8q2U-aCTjZMxL3s@2boGLV7TonMex8-nrT6EGat9zd5YaBeE'
+  '4b2GTJ-me_tylD6eVFsRAg==@0gUO7F7N-4HVDh9mdQC2hg==@fUJTgR9z26fXdQgTvt_bgqt9zd5YaBeE@nCQQXQHKGjPCb7jkd8q2U-aCTjZMxL3s@2boGLV7TonMex8-nrT6EGat9zd5YaBeE',
+  '4b2GTJ-me_tylD6eVFsRAg==@0gUO7F7N-4HVDh9mdQC2hg==@fUJTgR9z26fXdQgTvt_bgqt9zd5YaBeE@nCQQXQHKGjPCb7jkd8q2U-aCTjZMxL3s@2boGLV7TonMex8-nrT6EGat9zd5YaBeE'
 ];
 const randomCount = $.isNode() ? 10 : 5;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -175,7 +175,7 @@ if ($.isNode()) {
     return;
   }
   await requireConfig();
-  $.nextCode = ["EdLPh8A6X5G1iWXu-uPYfA==", "nCQQXQHKGjPCb7jkd8q2U-aCTjZMxL3s"];
+  $.nextCode = ["4b2GTJ-me_tylD6eVFsRAg==", "nCQQXQHKGjPCb7jkd8q2U-aCTjZMxL3s"];
   $.nextCode = $.nextCode[randomNumber(0, $.nextCode.length)];
   $.selfCodes = []
   for (let i = 0; i < cookiesArr.length; i++) {
@@ -317,7 +317,7 @@ function doApplyJdBean(bean = 1000) {
     })
   })
 }
-function getUserInfo(code = "EdLPh8A6X5G1iWXu-uPYfA==") {
+function getUserInfo(code = "4b2GTJ-me_tylD6eVFsRAg==") {
   let body = {"paramData": {"inviter": code}}
   return new Promise(async resolve => {
     $.get(taskUrl('crazyJoy_user_gameState', JSON.stringify(body)), async (err, resp, data) => {
