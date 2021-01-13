@@ -4,7 +4,6 @@
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-13 13:27:41
  */
-/*
 
 const $ = new Env('京东家庭号');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -75,7 +74,7 @@ async function jdFamily() {
 function showMsg() {
   return new Promise(resolve => {
     // message += `本次运行获得${$.beans}京豆`
-    $.msg($.name, '', `京东账号${$.index}${$.nickName}\n${message}`);
+    $.log($.name, '', `京东账号${$.index}${$.nickName}\n${message}`);
     resolve()
   })
 }
