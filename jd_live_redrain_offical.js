@@ -1,25 +1,25 @@
 /*
-直播间红包雨
-活动时间：1月17日-2月5日，每天19点、20点、21点
-更新地址：https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js
+官方号直播红包雨
+活动时间：2021年1月20日-2021年2月5日每天0,9,11,13,15,17,19,20,21,23点可领
+更新地址：https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
-#直播间红包雨
-0,1 19-21/1 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js, tag=直播间红包雨, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_live_redrain.jpg, enabled=true
+#官方号直播红包雨
+0 0,9,11,13,15,17,19,20,21,22,23 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, tag=官方号直播红包雨, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_live_redrain_offical.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "0,1 19-21/1 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js, tag=直播间红包雨
+cron "0 0,9,11,13,15,17,19,20,21,22,23 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, tag=官方号直播红包雨
 
 ===============Surge=================
-直播间红包雨 = type=cron,cronexp="0,1 19-21/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js
+官方号直播红包雨 = type=cron,cronexp="0 0,9,11,13,15,17,19,20,21,22,23 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js
 
 ============小火箭=========
-直播间红包雨 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js, cronexpr="0,1 19-21/1 * * *", timeout=200, enable=true
+官方号直播红包雨 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, cronexpr="0 0,9,11,13,15,17,19,20,21,22,23 * * *", timeout=200, enable=true
  */
-const $ = new Env('直播间红包雨');
+const $ = new Env('官方号直播红包雨');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -32,8 +32,8 @@ if ($.isNode()) {
   })
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {
   };
-  if (JSON.stringify(process.env).indexOf('GITHUB') > -1) process.exit(0)
-} else {
+  if(JSON.stringify(process.env).indexOf('GITHUB')>-1) process.exit(0)
+}else {
   let cookiesData = $.getdata('CookiesJD') || "[]";
   cookiesData = jsonParse(cookiesData);
   cookiesArr = cookiesData.map(item => item.cookie);
@@ -43,39 +43,35 @@ if ($.isNode()) {
   cookiesArr = cookiesArr.filter(item => item !== "" && item !== null && item !== undefined);
 }
 const JD_API_HOST = 'https://api.m.jd.com/api';
-let ids = {}
+let ids = {
+  '9':'RRA3vyGH4MRwCJELDwV7p24mNAByiSk',
+  '11': 'RRA3q6FQPT9BKg4C6EyhA99TcA9K7SL',
+  '13': 'RRA4AmPxr1Qv1vTDpFgNS57rjn1mjGQ',
+  '20': 'RRA3q6FQPT9BKg4C6EyhA99TcA9K7SL',
+  '21': 'RRA42SucXFqAPggaoYP4c3JYZLHGbkG',
+  '22': 'RRAPZRA9mVCzpjH38RUBPseJiZ6oj8',
+  '23': 'RRA4AmPxr1Qv1vTDpFgNS57rjn1mjGQ',
+  '0': 'RRA4AmPxr1Qv1vTDpFgNS57rjn1mjGQ',
+}
 !(async () => {
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
     return;
   }
-  if ($.isNode() && process.env.QINIU_SK) {
-    const fs = require('fs')
-    let data = fs.readFileSync('/home/shylocks/Projects/updateTeam/jd_live_redRain_half.json')
-    data = JSON.parse(data.toString())
-    $.activityId = data.activityId
-    $.st = data.startTime
-    $.ed = data.endTime
-    console.log(`从本地文件读取，下一场红包雨id：${$.activityId}`)
-    console.log(`下一场红包雨开始时间：${new Date(data.startTime)}`)
-    console.log(`下一场红包雨结束时间：${new Date(data.endTime)}`)
-  }
-  else {
-    await getRedRain();
-  }
+  await getRedRain();
 
   let nowTs = new Date().getTime()
   if (!($.st <= nowTs && nowTs < $.ed)) {
     $.log(`远程红包雨配置获取错误，从本地读取配置`)
-    let hour = (new Date().getUTCHours() + 8) % 24
-    if (ids[hour]) {
+    let hour = (new Date().getUTCHours() + 8) %24
+    if (ids[hour]){
       $.activityId = ids[hour]
       $.log(`本地红包雨配置获取成功`)
-    } else {
+    } else{
       $.log(`无法从本地读取配置，请检查运行时间`)
       return
     }
-  } else {
+  } else{
     $.log(`远程红包雨配置获取成功`)
   }
   for (let i = 0; i < cookiesArr.length; i++) {
@@ -86,7 +82,7 @@ let ids = {}
       $.isLogin = true;
       $.nickName = '';
       message = '';
-      //await TotalBean();
+      await TotalBean();
       console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
       if (!$.isLogin) {
         $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/`, {"open-url": "https://bean.m.jd.com/"});
@@ -122,11 +118,11 @@ function showMsg() {
 function getRedRain() {
   return new Promise(resolve => {
     $.get({
-      url: "http://qn6l5d6wm.hn-bkt.clouddn.com/jd_live_redRain.json?" + Date.now(),
+      url: "http://qn6l5d6wm.hn-bkt.clouddn.com/jd_live_redRain_offical.json?" + Date.now(),
     }, (err, resp, data) => {
       try {
         if (err) {
-          console.log(`${JSON.stringify(err)}`)
+          console.log(`1111${JSON.stringify(err)}`)
           console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
           if (safeGet(data)) {
@@ -168,7 +164,7 @@ function receiveRedRain() {
               console.log(`今日次数已满`)
               message += `领取失败，本场已领过`;
             } else {
-              message += `${data.msg}`;
+              console.log(`异常：${JSON.stringify(data)}`)
             }
           }
         }
