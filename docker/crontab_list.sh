@@ -164,3 +164,6 @@
 
 # 个护爱消除
 40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
+
+20 7 * * * node /scripts/jd_super_box.js >> /scripts/logs/jd_super_box.js 2>&1
+
