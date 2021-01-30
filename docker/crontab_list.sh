@@ -1,7 +1,3 @@
-#必须要的默认定时任务请勿删除
-#52 */1 * * * docker_entrypoint.sh >> /scripts/logs/default_task.log 2>&1
-47 */1 * * * crontab /scripts/docker/crontab_list.sh
-0 */1 * * * git -C /scripts/ pull >> /scripts/logs/pull.log 2>&1
 # 每3天的23:50分清理一次日志
 50 23 */3 * * rm -rf /scripts/logs/*.log
 
