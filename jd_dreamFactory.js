@@ -1390,6 +1390,8 @@ function requireConfig() {
           $.shareCodesArr.push(shareCodes[item])
         }
       })
+    } else {
+      console.log(`惊喜工厂邀请码:${$.getdata('jd_jxFactory')}`)
     }
     // console.log(`\n种豆得豆助力码::${JSON.stringify($.shareCodesArr)}`);
     console.log(`您提供了${$.shareCodesArr.length}个账号的${$.name}助力码\n`);
