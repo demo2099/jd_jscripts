@@ -49,8 +49,8 @@ if ($.isNode()) {
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
-  `ucp4UudBqMcbT-J9e_xx-UMQA96VZPICgwBY@oMZeX7Mco4wGBrBiNLAl-NqgPbNWoqjpA9BIHLl_7Z2uC4Bt@IgCqjVzgdTTH1EiF7y7wKtNNekKIwZI_m613kzU40leY64MXeqIV4A@oMZeXbUcqYgCBeMyZbAl-satYdK21PuqgGHNWJe9ioYocKg7`,
-  `ucp4UudBqMcbT-J9e_xx-UMQA96VZPMNgwJW@oMZeX7Mco4wGBrBiNLAl-NqgPbNWoqjpA9BIHLl_7Z2uC4Bt@IgCqjVzgdTTH1EiF7y7wKtNNekKIwZI_m613kzU40leY64MXeqIV4A@oMZeXbUcqYgCBeMyZbAl-satYdK21PuqgGHNWJe9ioYocKg7`,
+  `ucp4UudBqMcbT-J9e_xx-UMQA96VZPICgwBY@oMZeX7Mco4wGBrBiNLAl-NqgPbNWoqjpA9BIHLl_7Z2uC4Bt@oMZeX-MZptlSCucyZbF1rd5yz0h4UH_HSfqqFbMlZzbejPBD@oMZeXeAepdgCULEwYuYjqyz95kfX8nlv4zJZcfydoErpcyMu`,
+  `ucp4UudBqMcbT-J9e_xx-UMQA96VZPMNgwJW@oMZeX7Mco4wGBrBiNLAl-NqgPbNWoqjpA9BIHLl_7Z2uC4Bt@oMZeX-MZptlSCucyZbF1rd5yz0h4UH_HSfqqFbMlZzbejPBD@oMZeXeAepdgCULEwYuYjqyz95kfX8nlv4zJZcfydoErpcyMu`,
 ];
 !(async () => {
   await requireConfig();
@@ -362,6 +362,54 @@ function readShareCode() {
     })
     await $.wait(2000);
     resolve()
+  })
+}
+function sendCard(cardNo) {
+  return new Promise((resolve) => {
+    $.post(taskPostUrl('newyearmoney_sendCard', {"cardNo": cardNo}), async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`${$.name} API请求失败，请检查网路重试`)
+        } else {
+          data = JSON.parse(data);
+          if (data && data.data['bizCode'] === 0) {
+            receiveCardList.push(data.data.result.token)
+            console.log(`送卡成功`)
+          } else {
+            console.log(`送卡失败，${data.data.bizMsg}`)
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    })
+  })
+}
+
+function receiveCard(token) {
+  return new Promise((resolve) => {
+    $.post(taskPostUrl('newyearmoney_receiveCard', {"token": token}), async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`${$.name} API请求失败，请检查网路重试`)
+        } else {
+          data = JSON.parse(data);
+          if (data && data.data['bizCode'] === 0) {
+            console.log(`领卡成功`)
+          } else {
+            console.log(`领卡失败，${data.data.bizMsg}`)
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    })
   })
 }
 
