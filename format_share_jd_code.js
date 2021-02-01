@@ -1084,7 +1084,7 @@ let jdzz = []// JD赚赚
 let jdnian = []// JD炸年兽
 
 function showFormatMsg() {
-  console.log(`\n========== 【格式化互助码】 ==========`)
+  console.log(`\n========== 【格式化互助码&】 ==========`)
   console.log(`\n提交机器人 @Turing Lab Bot\n`)
   console.log(`/submit_bean_code ${submit_bean_code.join('&')}\n`)
   console.log(`/submit_farm_code ${submit_farm_code.join('&')}\n`)
@@ -1099,6 +1099,22 @@ function showFormatMsg() {
   console.log(`/jdnh ${jdnh.join('&')}\n`)
   console.log(`/jdzz ${jdzz.join('&')}\n`)
   console.log(`/jdnian ${jdnian.join('&')}\n`)
+
+  console.log(`\n========== 【格式化互助码@】 ==========`)
+  console.log(`/submit_bean_code ${submit_bean_code.join('@')}\n`)
+  console.log(`/submit_farm_code ${submit_farm_code.join('@')}\n`)
+  console.log(`/submit_pet_code ${submit_pet_code.join('@')}\n`)
+  console.log(`/submit_jxfactory_code ${submit_jxfactory_code.join('@')}\n`)
+  console.log(`/submit_ddfactory_code ${submit_ddfactory_code.join('@')}\n`)
+  console.log(
+    `/submit_zodiac_tempcode ${submit_zodiac_tempcode.join('@')}\n`
+  )
+  console.log(`\n提交机器人 @Commit Code Bot\n`)
+  console.log(`/jdcash ${jdcash.join('@')}\n`)
+  console.log(`/jdcrazyjoy ${jdcrazyjoy.join('@')}\n`)
+  console.log(`/jdnh ${jdnh.join('@')}\n`)
+  console.log(`/jdzz ${jdzz.join('@')}\n`)
+  console.log(`/jdnian ${jdnian.join('@')}\n`)
 }
 
 async function getShareCodeAndAdd() {
