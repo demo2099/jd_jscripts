@@ -28,8 +28,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
-//const randomCount = $.isNode() ? 20 : 5;
-let randomCount;
+const randomCount = $.isNode() ? 20 : 5;
 
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message, sendAccount = [], receiveAccount = [], receiveCardList = [];
@@ -77,7 +76,6 @@ const inviteCodes = [
         }
         continue
       }
-      await getHomeData();
       await shareCodesFormat();
       await jdNian()
       await showMsg()
@@ -181,7 +179,6 @@ function getHomeData(info = false) {
               }
               return
             }
-            randomCount = inviteId;
             console.log(`您的好友助力码为：${inviteId}`)
             await $.wait(2000)
             for (let i = 1; i <= 6; ++i) {
@@ -344,7 +341,7 @@ function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
     $.get({
-      url: `https://jdhelper.tk/api/v1/jd/year/read/${randomCount}/`,
+      url: `https://code.chiang.fun/api/v1/jd/year/read/${randomCount}/`,
       'timeout': 10000
     }, (err, resp, data) => {
       try {
