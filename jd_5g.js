@@ -97,7 +97,7 @@ async function jdFive() {
       await showMsg()
       return
     }
-    await getHelp()
+
     console.log(`去浏览会场`)
     await getMeetingList()
     console.log(`去浏览商品`)
@@ -595,6 +595,7 @@ function shareCodesFormat() {
       const tempIndex = $.index > inviteCodes.length ? (inviteCodes.length - 1) : ($.index - 1);
       $.newShareCodes = inviteCodes[tempIndex].split('@');
     }
+    await getHelp();
     const readShareCodeRes = await readShareCode();
     if (readShareCodeRes && readShareCodeRes.code === 200) {
       $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
