@@ -446,7 +446,7 @@ function getHelp() {
         } else {
           data = JSON.parse(data);
           if (data && data['code'] === 200) {
-            $.randomCount = data.data.shareId;
+            randomCount = data.data.shareId;
             console.log(`您的好友助力码为：${data.data.shareId} \n注：此邀请码每天都变！`);
           } else {
             console.log(JSON.stringify(data))
