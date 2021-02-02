@@ -77,6 +77,7 @@ const inviteCodes = [
         }
         continue
       }
+      await getHomeData();
       await shareCodesFormat();
       await jdNian()
       await showMsg()
