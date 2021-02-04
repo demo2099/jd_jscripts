@@ -94,7 +94,6 @@ const openUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%
       $.nickName = '';
       message = '';
       await TotalBean();
-      console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
       if (!$.isLogin) {
         $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
 
@@ -109,7 +108,7 @@ const openUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%
   if ((nowTimes.getHours() < 20 && nowTimes.getHours() >= 10) && nowTimes.getDate() === 4) {
     if (nowTimes.getHours() === 10 || nowTimes.getHours() === 19) {
       $.msg($.name, '', '队伍红包已可兑换\n点击弹窗直达兑换页面', { 'open-url' : openUrl});
-      if ($.isNode()) await notify.sendNotify($.name, `队伍红包已可兑换\n兑换地址: https://wbbny.m.jd.com/babelDiy/Zeus/2cKMj86srRdhgWcKonfExzK4ZMBy/index.html`)
+      if ($.isNode()) await notify.sendNotify($.name, `队伍PK红包已可兑换\n兑换地址: https://wbbny.m.jd.com/babelDiy/Zeus/2cKMj86srRdhgWcKonfExzK4ZMBy/index.html`)
     }
   }
   if (nowTimes.getHours() === 20 && nowTimes.getDate() === 4) {
@@ -129,21 +128,22 @@ async function jdNian() {
     $.full = false
     await getHomeData()
     if (!$.secretp) return
-    let hour = new Date().getUTCHours()
-    if (1 <= hour && hour < 12) {
-      // 北京时间9点-20点
-      $.hasGroup = false
-      await pkTaskDetail()
-      if ($.hasGroup) await pkInfo()
-      await helpFriendsPK()
-    }
-    if (12 <= hour && hour < 14) {
-      // 北京时间20点-22点
-      $.hasGroup = false
-      await pkTaskStealDetail()
-      if ($.hasGroup) await pkInfo()
-      await helpFriendsPK()
-    }
+    // 注释PK互助代码
+    // let hour = new Date().getUTCHours()
+    // if (1 <= hour && hour < 12) {
+    //   // 北京时间9点-20点
+    //   $.hasGroup = false
+    //   await pkTaskDetail()
+    //   if ($.hasGroup) await pkInfo()
+    //   await helpFriendsPK()
+    // }
+    // if (12 <= hour && hour < 14) {
+    //   // 北京时间20点-22点
+    //   $.hasGroup = false
+    //   await pkTaskStealDetail()
+    //   if ($.hasGroup) await pkInfo()
+    //   await helpFriendsPK()
+    // }
     if($.full) return
     await $.wait(2000)
     await killCouponList()
