@@ -61,18 +61,28 @@ if ($.isNode()) {
     }
   } else {
     await downloadUrl();
-    if (!$.body) {
-      await downloadUrl('https://cdn.jsdelivr.net/gh/NobyDa/Script@master/JD-DailyBonus/JD_DailyBonus.js');
-      for (let i = 0; i < cookiesArr.length; i++) {
-        cookie = cookiesArr[i];
-        if (cookie) {
-          $.body = $.body.replace(/var Key = '.*'/, `var Key = '${cookie}'`)
-          console.log(`*****************开始京东账号${i + 1}京豆签到*******************\n`);
-          await eval($.body);
-          await $.wait(10 * 1000)
-          // console.log($.body)
-          // await evalSign($.body);
-        }
+    if (!$.body) await downloadUrl('https://cdn.jsdelivr.net/gh/NobyDa/Script@master/JD-DailyBonus/JD_DailyBonus.js');
+    // await $.wait(10 * 1000)
+    // const promiseArr = cookiesArr.map(ck => evalSign(ck));
+    // await Promise.all(promiseArr);
+    for (let i = 0; i < cookiesArr.length; i++) {
+      cookie = cookiesArr[i];
+      if (cookie) {
+        console.log(`*****************开始京东账号${i + 1}京豆签到*******************\n`);
+        $.body = $.body.replace(/var Key = '.*'/, `var Key = '${cookie}'`)
+        await new Promise((resolve) => {
+          $.resolve = resolve
+          $.body = $.body.replace(/\$done/g, '$.resolve')
+          $.body = $.body.replace(/\$\.done/g, '$.resolve')
+          $.log($.body)
+          try {
+            eval($.body)
+          } catch (e) {
+            $.logErr(e)
+          } finally {
+            resolve()
+          }
+        })
       }
     }
   }
@@ -271,8 +281,9 @@ function downloadUrl(url = 'https://raw.githubusercontent.com/NobyDa/Script/mast
 function evalSign(data) {
   return new Promise(async resolve => {
     try {
-      await eval(data);
-      await $.wait(10 * 1000);
+      $.body = $.body.replace(/var Key = '.*'/, `var Key = '${data}'`)
+      await eval($.body);
+      // await $.wait(10 * 1000);
     } catch (e) {
       $.logErr(e)
     } finally {
