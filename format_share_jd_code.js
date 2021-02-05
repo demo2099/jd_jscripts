@@ -1108,7 +1108,7 @@ function showFormatMsg() {
   console.log(`jd_pet ${submit_pet_code.join('@')}\n`)
   console.log(`jd_crazyjoy ${jdcrazyjoy.join('@')}\n`)
   console.log(`dd_factory ${submit_ddfactory_code.join('@')}\n`)
-  console.log(`/submit_jxfactory_code ${submit_jxfactory_code.join('@')}\n`)
+  console.log(`jx_factory ${submit_jxfactory_code.join('@')}\n`)
   console.log(`/submit_zodiac_tempcode ${submit_zodiac_tempcode.join('@')}\n`)
   console.log(`/jdcash ${jdcash.join('@')}\n`)
   console.log(`/jdnh ${jdnh.join('@')}\n`)
