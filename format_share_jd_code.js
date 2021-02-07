@@ -1137,33 +1137,20 @@ function formatForJDFreeFuck(arr = [], name = '', itemName = '', forOtherName = 
     const name = '${' + itemName + (i + 1) + '}'
     nameArr.push(name)
   }
+
+  for (let m = 0; m < nameArr.length; m++) {
+    const item = nameArr[m];
+    
+    console.log(
+      `${forOtherName}${m + 1}="${nameArr
+        .filter(cell => cell !== item)
+        .join('@')}"`
+    )
+  }
   
-  console.log(`${forOtherName}="${nameArr.join('@')}"\n`)
 }
 
 function showFormatMsg() {
-  console.log(`\n========== 【格式化互助码for JD-FreeFuck ==========`)
-  formatForJDFreeFuck(submit_bean_code, '种豆得豆', 'MyBean', 'ForOtherBean')
-  formatForJDFreeFuck(submit_farm_code, '东东农场', 'MyFruit', 'ForOtherFruit')
-  formatForJDFreeFuck(submit_pet_code, '东东萌宠', 'MyPet', 'ForOtherPet')
-  formatForJDFreeFuck(
-    submit_jxfactory_code,
-    '京喜工厂',
-    'MyDreamFactory',
-    'ForOtherDreamFactory'
-  )
-  formatForJDFreeFuck(
-    submit_ddfactory_code,
-    '东东工厂',
-    'MyJdFactory',
-    'ForOtherJdFactory'
-  )
-  formatForJDFreeFuck(jdcash, '签到领现金', 'MyCash', 'ForOtherCash')
-  formatForJDFreeFuck(jdcrazyjoy, 'crazy joy', 'MyJoy', 'ForOtherJoy')
-  formatForJDFreeFuck(jdSgmh, '闪购盲盒', 'MySgmh', 'ForOtherSgmh')
-
-
-
   console.log(`\n========== 【格式化互助码&】 ==========`)
   console.log(`\n提交机器人 @Turing Lab Bot\n`)
   console.log(`/submit_bean_code ${submit_bean_code.join('&')}\n`)
@@ -1180,18 +1167,30 @@ function showFormatMsg() {
   console.log(`/jdzz ${jdzz.join('&')}\n`)
   console.log(`/jdnian ${jdnian.join('&')}\n`)
 
-  console.log(`\n========== 【格式化互助码@】 ==========`)
-  console.log(`jd_plantBean ${submit_bean_code.join('@')}\n`)
-  console.log(`jd_fruit ${submit_farm_code.join('@')}\n`)
-  console.log(`jd_pet ${submit_pet_code.join('@')}\n`)
-  console.log(`jd_crazyjoy ${jdcrazyjoy.join('@')}\n`)
-  console.log(`dd_factory ${submit_ddfactory_code.join('@')}\n`)
-  console.log(`jx_factory ${submit_jxfactory_code.join('@')}\n`)
-  console.log(`/submit_zodiac_tempcode ${submit_zodiac_tempcode.join('@')}\n`)
-  console.log(`/jdcash ${jdcash.join('@')}\n`)
-  console.log(`/jdnh ${jdnh.join('@')}\n`)
-  console.log(`/jdzz ${jdzz.join('@')}\n`)
-  console.log(`/jdnian ${jdnian.join('@')}\n`)
+    console.log(`\n========== 【格式化互助码for JD-FreeFuck ==========`)
+    formatForJDFreeFuck(submit_bean_code, '种豆得豆', 'MyBean', 'ForOtherBean')
+    formatForJDFreeFuck(
+      submit_farm_code,
+      '东东农场',
+      'MyFruit',
+      'ForOtherFruit'
+    )
+    formatForJDFreeFuck(submit_pet_code, '东东萌宠', 'MyPet', 'ForOtherPet')
+    formatForJDFreeFuck(
+      submit_jxfactory_code,
+      '京喜工厂',
+      'MyDreamFactory',
+      'ForOtherDreamFactory'
+    )
+    formatForJDFreeFuck(
+      submit_ddfactory_code,
+      '东东工厂',
+      'MyJdFactory',
+      'ForOtherJdFactory'
+    )
+    formatForJDFreeFuck(jdcash, '签到领现金', 'MyCash', 'ForOtherCash')
+    formatForJDFreeFuck(jdcrazyjoy, 'crazy joy', 'MyJoy', 'ForOtherJoy')
+    formatForJDFreeFuck(jdSgmh, '闪购盲盒', 'MySgmh', 'ForOtherSgmh')
 }
 
 async function getShareCodeAndAdd() {
