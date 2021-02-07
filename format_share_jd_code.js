@@ -1067,6 +1067,49 @@ async function getJDCase() {
 
   await getUserInfo()
 }
+//闪购盲盒
+async function getSgmh(timeout = 0) {
+  return new Promise((resolve) => {
+    setTimeout( ()=>{
+      let url = {
+        url : `https://api.m.jd.com/client.action`,
+        headers : {
+          'Origin' : `https://h5.m.jd.com`,
+          'Cookie' : cookie,
+          'Connection' : `keep-alive`,
+          'Accept' : `application/json, text/plain, */*`,
+          'Referer' : `https://h5.m.jd.com/babelDiy/Zeus/2WBcKYkn8viyxv7MoKKgfzmu7Dss/index.html`,
+          'Host' : `api.m.jd.com`,
+          'Accept-Encoding' : `gzip, deflate, br`,
+          'Accept-Language' : `zh-cn`
+        },
+        body : `functionId=interact_template_getHomeData&body={"appId":"1EFRRxA","taskToken":""}&client=wh5&clientVersion=1.0.0`
+      }
+
+      $.post(url, async (err, resp, data) => {
+        try {
+          if (safeGet(data)) {
+            data = JSON.parse(data);
+            if (data.data.bizCode === 0) {
+              for (let i = 0; i < data.data.result.taskVos.length; i++) {
+                if (data.data.result.taskVos[i].taskName === '邀人助力任务') {
+                  console.log(`【账号${$.index}（${$.nickName || $.UserName}）闪购盲盒】${data.data.result.taskVos[i].assistTaskDetailVo.taskToken}`)
+                  jdSgmh.push(
+                    data.data.result.taskVos[i].assistTaskDetailVo.taskToken
+                  )
+                }
+              }
+            }
+          }
+        } catch (e) {
+          $.logErr(e, resp);
+        } finally {
+          resolve()
+        }
+      })
+    },timeout)
+  })
+}
 
 // @Turing Lab Bot
 let submit_bean_code = []// 种豆得豆
@@ -1082,6 +1125,8 @@ let jdcrazyjoy = []// crazy joy
 let jdnh = []// JD年货
 let jdzz = []// JD赚赚
 let jdnian = []// JD炸年兽
+
+let jdSgmh = [] // 闪购盲盒
 
 function formatForJDFreeFuck(arr = [], name = '', itemName = '', forOtherName = '') {
   console.log(`# ${name}`)
@@ -1114,7 +1159,8 @@ function showFormatMsg() {
     'ForOtherJdFactory'
   )
   formatForJDFreeFuck(jdcash, '签到领现金', 'MyCash', 'ForOtherCash')
- 
+  formatForJDFreeFuck(jdcrazyjoy, 'crazy joy', 'MyJoy', 'ForOtherJoy')
+  formatForJDFreeFuck(jdSgmh, '闪购盲盒', 'MySgmh', 'ForOtherSgmh')
 
 
 
@@ -1161,6 +1207,7 @@ async function getShareCodeAndAdd() {
   await getJdNS() // 年兽
   await getJdNH() // 京东年货
   await getJDCase() // 京东签到领现金
+  await getSgmh() // 闪购盲盒
   console.log(`======账号${$.index}结束======\n`)
 }
 
