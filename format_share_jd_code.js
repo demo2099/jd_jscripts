@@ -1083,7 +1083,41 @@ let jdnh = []// JD年货
 let jdzz = []// JD赚赚
 let jdnian = []// JD炸年兽
 
+function formatForJDFreeFuck(arr = [], name = '', itemName = '', forOtherName = '') {
+  console.log(`# ${name}`)
+  const nameArr = []
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i]
+    console.log(`${itemName}${i + 1}="${item}"`)
+    const name = '${' + itemName + (i + 1) + '}'
+    nameArr.push(name)
+  }
+  
+  console.log(`${forOtherName}="${nameArr.join('@')}"\n`)
+}
+
 function showFormatMsg() {
+  console.log(`\n========== 【格式化互助码for JD-FreeFuck ==========`)
+  formatForJDFreeFuck(submit_bean_code, '种豆得豆', 'MyBean', 'ForOtherBean')
+  formatForJDFreeFuck(submit_farm_code, '东东农场', 'MyFruit', 'ForOtherFruit')
+  formatForJDFreeFuck(submit_pet_code, '东东萌宠', 'MyPet', 'ForOtherPet')
+  formatForJDFreeFuck(
+    submit_jxfactory_code,
+    '京喜工厂',
+    'MyDreamFactory',
+    'ForOtherDreamFactory'
+  )
+  formatForJDFreeFuck(
+    submit_ddfactory_code,
+    '东东工厂',
+    'MyJdFactory',
+    'ForOtherJdFactory'
+  )
+  formatForJDFreeFuck(jdcash, '签到领现金', 'MyCash', 'ForOtherCash')
+ 
+
+
+
   console.log(`\n========== 【格式化互助码&】 ==========`)
   console.log(`\n提交机器人 @Turing Lab Bot\n`)
   console.log(`/submit_bean_code ${submit_bean_code.join('&')}\n`)
@@ -1099,8 +1133,6 @@ function showFormatMsg() {
   console.log(`/jdnh ${jdnh.join('&')}\n`)
   console.log(`/jdzz ${jdzz.join('&')}\n`)
   console.log(`/jdnian ${jdnian.join('&')}\n`)
-
-
 
   console.log(`\n========== 【格式化互助码@】 ==========`)
   console.log(`jd_plantBean ${submit_bean_code.join('@')}\n`)
