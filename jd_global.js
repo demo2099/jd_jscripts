@@ -50,7 +50,7 @@ if ($.isNode()) {
 
 const JD_API_HOST = 'https://api.m.jd.com/', actCode = 'visa-card-001';
 const inviteCodes = [
-  'WmpHM2pndWh3OFphS2NsbTRLMmhqZz09@M3ozUGw0eExUZ25hSHBTZ2pJcTdpZz09@S2tETnZ0REtONy9Dc2Nqek1KNXpmWHFTNnF3OUtQQjJKZmJ2YUtSS3BQTT0=@a1RrenU1WExQaXRWS3VIZHgwMjlUYzJSeHhVMDlvZXgxR2RsdkZkRXZnOD0=@bHNsOVFIL2tQRTJhSndpRVNHVTlheXJLbzZRK09HaUtidjJUUFNQRXdqbz0=',
+  'WmpHM2pndWh3OFphS2NsbTRLMmhqZz09@M3ozUGw0eExUZ25hSHBTZ2pJcTdpZz09@S2tETnZ0REtONy9Dc2Nqek1KNXpmWHFTNnF3OUtQQjJKZmJ2YUtSS3BQTT0=@a1RrenU1WExQaXRWS3VIZHgwMjlUYzJSeHhVMDlvZXgxR2RsdkZkRXZnOD0=@bHNsOVFIL2tQRTJhSndpRVNHVTlheXJLbzZRK09HaUtidjJUUFNQRXdqbz0=@M0JxTFVEbmxtV05uQWJVQVdyL2NxeTcycG1lcWtEbzVOc283bjR2MklkWT0=',
   'a1RrenU1WExQaXRWS3VIZHgwMjlUYzJSeHhVMDlvZXgxR2RsdkZkRXZnOD0=@bHNsOVFIL2tQRTJhSndpRVNHVTlheXJLbzZRK09HaUtidjJUUFNQRXdqbz0=@WmpHM2pndWh3OFphS2NsbTRLMmhqZz09@M3ozUGw0eExUZ25hSHBTZ2pJcTdpZz09@S2tETnZ0REtONy9Dc2Nqek1KNXpmWHFTNnF3OUtQQjJKZmJ2YUtSS3BQTT0=',
 ];
 $.invites = [];
@@ -321,7 +321,7 @@ function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
     $.get({
-      url: `http://jd.turinglabs.net/api/v2/jd/farm/read/${randomCount}/`,
+      url: `http://jd.turinglabs.net/api/v2/jd/jdglobal/read/${randomCount}/`,
       'timeout': 10000
     }, (err, resp, data) => {
       try {
