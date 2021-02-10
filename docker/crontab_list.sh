@@ -1,7 +1,7 @@
-# 每3天的23:50分清理一次日志
+# 每3天的23:50分清理一次日志(互助码不清理，proc_file.sh对该文件进行了去重)
 47 */1 * * * crontab /scripts/docker/crontab_list.sh
 0 */1 * * * git -C /scripts/ pull >> /scripts/logs/pull.log 2>&1
-50 23 */3 * * rm -rf /scripts/logs/*.log
+50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecode' | xargs rm -rf
 
 ##############短期活动##############
 # 小鸽有礼(活动时间：2021年1月15日至2021年2月19日)
