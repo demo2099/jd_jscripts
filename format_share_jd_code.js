@@ -1521,11 +1521,11 @@ async function getJdNH() {
 }
 // jd签到领现金
 async function getJDCase() {
-  const JDZZ_API_HOST = 'https://api.m.jd.com/client.action'
+  const JD_API_HOST = 'https://api.m.jd.com/client.action'
 
   function getUserInfo() {
     return new Promise(resolve => {
-      $.get(taskZZUrl('cash_mob_home'), async (err, resp, data) => {
+      $.get(taskUrl('cash_mob_home'), async (err, resp, data) => {
         try {
           if (err) {
             console.log(`${JSON.stringify(err)}`)
@@ -1539,8 +1539,7 @@ async function getJDCase() {
                     $.nickName || $.UserName
                   }）京东签到领现金】${data.data.result.inviteCode}`
                 )
-                let token = data.data.result.inviteCode
-                jdcash.push(token)
+                jdcash.push(data.data.result.inviteCode)
               }
             }
           }
@@ -1553,11 +1552,11 @@ async function getJDCase() {
     })
   }
 
-  function taskZZUrl(functionId, body = {}) {
+  function taskUrl(functionId, body = {}) {
     return {
-      url: `${JDZZ_API_HOST}?functionId=${functionId}&body=${escape(
+      url: `${JD_API_HOST}?functionId=${functionId}&body=${escape(
         JSON.stringify(body)
-      )}&client=wh5&clientVersion=9.1.0`,
+      )}&appid=CashRewardMiniH5Env&appid=9.1.0`,
       headers: {
         Cookie: cookie,
         Host: 'api.m.jd.com',
@@ -1746,25 +1745,46 @@ function formatForJDFreeFuck(
   }
 }
 
+function getRandomArrayElements(arr, count = 4) {
+  if (arr.length === 0) {
+    return arr
+  }else {
+    let shuffled = arr.slice(0),
+      i = arr.length,
+      min = i - count,
+      temp,
+      index
+    while (i-- > min) {
+      index = Math.floor((i + 1) * Math.random())
+      temp = shuffled[index]
+      shuffled[index] = shuffled[i]
+      shuffled[i] = temp
+    }
+    const res = [arr[0], ...shuffled.slice(min)]
+    return [...new Set(res)]
+  }
+}
+
 function showFormatMsg() {
-  console.log(`\n========== 【格式化互助码&】 ==========`)
+  console.log(`\n========== 【格式化互助码只留随机4-5个(一定有第一个)】 ==========`)
   console.log(`\n提交机器人 @Turing Lab Bot\n`)
-  console.log(`/submit_activity_codes jdglobal  ${hqtzs.join('&')}\n`)
-  console.log(`/submit_activity_codes bean ${submit_bean_code.join('&')}\n`)
-  console.log(`/submit_activity_codes farm ${submit_farm_code.join('&')}\n`)
-  console.log(`/submit_activity_codes pet ${submit_pet_code.join('&')}\n`)
-  console.log(`/submit_activity_codes jxfactory ${submit_jxfactory_code.join('&')}\n`)
-  console.log(`/submit_activity_codes ddfactory ${submit_ddfactory_code.join('&')}\n`)
-  console.log(`/submit_activity_codes sgmh ${jdSgmh.join('&')}\n`)
+  console.log(`/submit_activity_codes bean ${getRandomArrayElements(submit_bean_code).join('&')}\n`)
+  console.log(`/submit_activity_codes farm ${getRandomArrayElements(submit_farm_code).join('&')}\n`)
+  console.log(`/submit_activity_codes pet ${getRandomArrayElements(submit_pet_code).join('&')}\n`)
+  console.log(`/submit_activity_codes jxfactory ${getRandomArrayElements(submit_jxfactory_code).join('&')}\n`)
+  console.log(`/submit_activity_codes ddfactory ${getRandomArrayElements(submit_ddfactory_code).join('&')}\n`)
+  // 临时活动
+  console.log(`/submit_activity_codes jdglobal ${getRandomArrayElements(hqtzs).join('&')}\n`)
+  console.log(`/submit_activity_codes sgmh ${getRandomArrayElements(jdSgmh).join('&')}\n`)
 
   console.log(`\n提交机器人 @Commit Code Bot\n`)
-  console.log(`/jdcash ${jdcash.join('&')}\n`)
-  console.log(`/jdcrazyjoy ${jdcrazyjoy.join('&')}\n`)
+  console.log(`/jdcash ${getRandomArrayElements(jdcash).join('&')}\n`)
+  console.log(`/jdcrazyjoy ${getRandomArrayElements(jdcrazyjoy).join('&')}\n`)
   // console.log(`/jdnh ${jdnh.join('&')}\n`)
-  console.log(`/jdzz ${jdzz.join('&')}\n`)
+  console.log(`/jdzz ${getRandomArrayElements(jdzz).join('&')}\n`)
   // console.log(`/jdnian ${jdnian.join('&')}\n`)
 
-  console.log(`\n========== 【格式化互助码for JD-FreeFuck ==========`)
+  console.log(`\n========== 【格式化互助码for docker ==========`)
   formatForJDFreeFuck(hqtzs, '环球挑战赛(2.22)', 'MyGLOBAL', 'ForOtherGLOBAL')
   formatForJDFreeFuck(submit_bean_code, '种豆得豆', 'MyBean', 'ForOtherBean')
   formatForJDFreeFuck(submit_farm_code, '东东农场', 'MyFruit', 'ForOtherFruit')
