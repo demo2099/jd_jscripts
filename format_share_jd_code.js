@@ -890,6 +890,7 @@ function getJdPet() {
     })
   })
 }
+
 async function getJdZZ() {
   const JDZZ_API_HOST = 'https://api.m.jd.com/client.action'
 
@@ -912,7 +913,11 @@ async function getJdZZ() {
                 let token = data.data.shareTaskRes.itemId
                 jdzz.push(token)
               } else {
-                //console.log(`已满5人助力,暂时看不到您的京东赚赚好友助力码`)
+                console.log(
+                  `【账号${$.index}（${
+                    $.nickName || $.UserName
+                  }）京东赚赚】已满5人助力或助力功能已下线,故暂时无好友助力码`
+                )
               }
             }
           }
@@ -951,6 +956,7 @@ async function getJdZZ() {
 
   await getUserInfo()
 }
+
 async function getPlantBean() {
   const JDplant_API_HOST = 'https://api.m.jd.com/client.action'
 
@@ -1525,8 +1531,6 @@ async function getJDCase() {
             console.log(`${JSON.stringify(err)}`)
             console.log(`${$.name} API请求失败，请检查网路重试`)
           } else {
-            console.log('data')
-            console.log(data)
             if (safeGet(data)) {
               data = JSON.parse(data)
               if (data.code === 0 && data.data.result) {
@@ -1705,14 +1709,13 @@ let submit_farm_code = [] // 东东农场互助码
 let submit_pet_code = [] // 东东萌宠
 let submit_jxfactory_code = [] // 京喜工厂互助码
 let submit_ddfactory_code = [] // 东东工厂互助码
-let submit_zodiac_tempcode = [] // 年兽
 
 // Commit Code Bot
 let jdcash = [] // 京东 签到领现金
 let jdcrazyjoy = [] // crazy joy
-let jdnh = [] // JD年货
+// let jdnh = [] // JD年货
 let jdzz = [] // JD赚赚
-let jdnian = [] // JD炸年兽
+// let jdnian = [] // JD炸年兽
 
 let jdSgmh = [] // 闪购盲盒
 let hqtzs = [] // 环球挑战赛
@@ -1746,20 +1749,20 @@ function formatForJDFreeFuck(
 function showFormatMsg() {
   console.log(`\n========== 【格式化互助码&】 ==========`)
   console.log(`\n提交机器人 @Turing Lab Bot\n`)
-  console.log(`/submit_temp_code jdglobal  ${hqtzs.join('&')}\n`)
-  console.log(`/submit_bean_code ${submit_bean_code.join('&')}\n`)
-  console.log(`/submit_farm_code ${submit_farm_code.join('&')}\n`)
-  console.log(`/submit_pet_code ${submit_pet_code.join('&')}\n`)
-  console.log(`/submit_jxfactory_code ${submit_jxfactory_code.join('&')}\n`)
-  console.log(`/submit_ddfactory_code ${submit_ddfactory_code.join('&')}\n`)
-  console.log(`/submit_zodiac_tempcode ${submit_zodiac_tempcode.join('&')}\n`)
+  console.log(`/submit_activity_codes jdglobal  ${hqtzs.join('&')}\n`)
+  console.log(`/submit_activity_codes bean ${submit_bean_code.join('&')}\n`)
+  console.log(`/submit_activity_codes farm ${submit_farm_code.join('&')}\n`)
+  console.log(`/submit_activity_codes pet ${submit_pet_code.join('&')}\n`)
+  console.log(`/submit_activity_codes jxfactory ${submit_jxfactory_code.join('&')}\n`)
+  console.log(`/submit_activity_codes ddfactory ${submit_ddfactory_code.join('&')}\n`)
+  console.log(`/submit_activity_codes sgmh ${jdSgmh.join('&')}\n`)
 
   console.log(`\n提交机器人 @Commit Code Bot\n`)
   console.log(`/jdcash ${jdcash.join('&')}\n`)
   console.log(`/jdcrazyjoy ${jdcrazyjoy.join('&')}\n`)
-  console.log(`/jdnh ${jdnh.join('&')}\n`)
+  // console.log(`/jdnh ${jdnh.join('&')}\n`)
   console.log(`/jdzz ${jdzz.join('&')}\n`)
-  console.log(`/jdnian ${jdnian.join('&')}\n`)
+  // console.log(`/jdnian ${jdnian.join('&')}\n`)
 
   console.log(`\n========== 【格式化互助码for JD-FreeFuck ==========`)
   formatForJDFreeFuck(hqtzs, '环球挑战赛(2.22)', 'MyGLOBAL', 'ForOtherGLOBAL')
@@ -1785,7 +1788,7 @@ function showFormatMsg() {
 
 async function getShareCodeAndAdd() {
   console.log(`======账号${$.index}开始======`)
-  await getGlobal()
+  await getGlobal() // 京东国际
   await getJdFactory() // 东东工厂
   await getJxFactory() // 京喜工厂
   await getJxNc() // 京喜农场
@@ -1794,8 +1797,8 @@ async function getShareCodeAndAdd() {
   await getJDFruit() // 京东农场
   await getJdZZ() // 京东赚赚
   await getJoy() // CrazyJoy
-  await getJdNS() // 年兽
-  await getJdNH() // 京东年货
+  // await getJdNS() // 年兽
+  // await getJdNH() // 京东年货
   await getJDCase() // 京东签到领现金
   await getSgmh() // 闪购盲盒
   console.log(`======账号${$.index}结束======\n`)
