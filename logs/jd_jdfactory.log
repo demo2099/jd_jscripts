@@ -307,3 +307,78 @@ Feb 22 04:38:17
 Feb 22 04:38:17 
 Feb 22 04:38:17 🔔东东工厂, 结束! 🕛 135.116 秒
 Feb 22 04:38:17 
+Feb 22 05:36:01 
+Feb 22 05:36:01 🔔东东工厂, 开始!
+Feb 22 05:36:01 
+Feb 22 05:36:01 ====================共有1个京东账号Cookie=========
+Feb 22 05:36:01 
+Feb 22 05:36:01 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 5:36:01 AM=====================
+Feb 22 05:36:01 
+Feb 22 05:36:01 开始获取东东工厂配置文件
+Feb 22 05:36:01 
+Feb 22 05:36:01 共1个京东账号
+Feb 22 05:36:01 
+Feb 22 05:36:01 您提供了0个账号的东东工厂助力码
+Feb 22 05:36:01 
+Feb 22 05:36:04 
+Feb 22 05:36:04 ******开始【京东账号1】jd_wPcJDZeiQcAi*********
+Feb 22 05:36:04 
+Feb 22 05:36:04 
+Feb 22 05:36:04 ==============📣系统通知📣==============
+Feb 22 05:36:04 东东工厂
+Feb 22 05:36:04 【提示】cookie已失效
+Feb 22 05:36:04 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 05:36:04 请重新登录获取
+Feb 22 05:36:04 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 05:36:04 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 05:36:04 
+Feb 22 05:36:08 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 05:36:08 
+Feb 22 05:36:08 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 05:36:08 
+Feb 22 05:36:08 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 05:36:08 
+Feb 22 05:36:08 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 05:36:08 
+Feb 22 05:36:08 token is not exist
+Feb 22 05:36:08 
+Feb 22 05:38:19 telegram发送通知消息失败！！
+Feb 22 05:38:19 
+Feb 22 05:38:19 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 05:38:19     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 05:38:19     at Object.onceWrapper (events.js:421:26)
+Feb 22 05:38:19     at ClientRequest.emit (events.js:326:22)
+Feb 22 05:38:19     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 05:38:19     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 05:38:19     at TLSSocket.emit (events.js:314:20)
+Feb 22 05:38:19     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 05:38:19     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 05:38:19     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 05:38:19     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 05:38:19   code: 'ETIMEDOUT',
+Feb 22 05:38:19   timings: {
+Feb 22 05:38:19     start: 1613943368204,
+Feb 22 05:38:19     socket: 1613943368205,
+Feb 22 05:38:19     lookup: 1613943368208,
+Feb 22 05:38:19     connect: undefined,
+Feb 22 05:38:19     secureConnect: undefined,
+Feb 22 05:38:19     upload: undefined,
+Feb 22 05:38:19     response: undefined,
+Feb 22 05:38:19     end: undefined,
+Feb 22 05:38:19     error: 1613943499252,
+Feb 22 05:38:19     abort: undefined,
+Feb 22 05:38:19     phases: {
+Feb 22 05:38:19       wait: 1,
+Feb 22 05:38:19       dns: 3,
+Feb 22 05:38:19       tcp: undefined,
+Feb 22 05:38:19       tls: undefined,
+Feb 22 05:38:19       request: undefined,
+Feb 22 05:38:19       firstByte: undefined,
+Feb 22 05:38:19       download: undefined,
+Feb 22 05:38:19       total: 131048
+Feb 22 05:38:19     }
+Feb 22 05:38:19   }
+Feb 22 05:38:19 }
+Feb 22 05:38:19 
+Feb 22 05:38:19 🔔东东工厂, 结束! 🕛 138.346 秒
+Feb 22 05:38:19 

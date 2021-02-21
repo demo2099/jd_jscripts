@@ -1,0 +1,75 @@
+Feb 22 06:05:03 
+Feb 22 06:05:03 🔔东东萌宠, 开始!
+Feb 22 06:05:03 开始获取东东萌宠配置文件
+Feb 22 06:05:03 
+Feb 22 06:05:03 
+Feb 22 06:05:03 ====================共有1个京东账号Cookie=========
+Feb 22 06:05:03 
+Feb 22 06:05:03 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 6:05:03 AM=====================
+Feb 22 06:05:03 
+Feb 22 06:05:03 共1个京东账号
+Feb 22 06:05:03 
+Feb 22 06:05:03 您提供了1个账号的东东萌宠助力码
+Feb 22 06:05:03 
+Feb 22 06:05:10 
+Feb 22 06:05:10 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 22 06:05:10 
+Feb 22 06:05:10 
+Feb 22 06:05:10 ==============📣系统通知📣==============
+Feb 22 06:05:10 东东萌宠
+Feb 22 06:05:10 【提示】cookie已失效
+Feb 22 06:05:10 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 06:05:10 请重新登录获取
+Feb 22 06:05:10 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 06:05:10 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 06:05:10 
+Feb 22 06:05:13 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 06:05:13 
+Feb 22 06:05:13 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 06:05:13 
+Feb 22 06:05:13 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 06:05:13 
+Feb 22 06:05:14 Telegram发送通知消息完成。
+Feb 22 06:05:14 
+Feb 22 06:05:14 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 06:05:14 
+Feb 22 06:05:18 钉钉发送通知消息失败！！
+Feb 22 06:05:18 
+Feb 22 06:05:18 RequestError: getaddrinfo EAI_AGAIN oapi.dingtalk.com
+Feb 22 06:05:18     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 06:05:18     at Object.onceWrapper (events.js:421:26)
+Feb 22 06:05:18     at ClientRequest.emit (events.js:326:22)
+Feb 22 06:05:18     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 06:05:18     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 06:05:18     at TLSSocket.emit (events.js:314:20)
+Feb 22 06:05:18     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 06:05:18     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 06:05:18     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 06:05:18     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+Feb 22 06:05:18   code: 'EAI_AGAIN',
+Feb 22 06:05:18   timings: {
+Feb 22 06:05:18     start: 1613945113445,
+Feb 22 06:05:18     socket: 1613945113446,
+Feb 22 06:05:18     lookup: 1613945118449,
+Feb 22 06:05:18     connect: undefined,
+Feb 22 06:05:18     secureConnect: undefined,
+Feb 22 06:05:18     upload: undefined,
+Feb 22 06:05:18     response: undefined,
+Feb 22 06:05:18     end: undefined,
+Feb 22 06:05:18     error: 1613945118450,
+Feb 22 06:05:18     abort: undefined,
+Feb 22 06:05:18     phases: {
+Feb 22 06:05:18       wait: 1,
+Feb 22 06:05:18       dns: 5003,
+Feb 22 06:05:18       tcp: undefined,
+Feb 22 06:05:18       tls: undefined,
+Feb 22 06:05:18       request: undefined,
+Feb 22 06:05:18       firstByte: undefined,
+Feb 22 06:05:18       download: undefined,
+Feb 22 06:05:18       total: 5005
+Feb 22 06:05:18     }
+Feb 22 06:05:18   }
+Feb 22 06:05:18 }
+Feb 22 06:05:18 
+Feb 22 06:05:18 🔔东东萌宠, 结束! 🕛 16.039 秒
+Feb 22 06:05:18 

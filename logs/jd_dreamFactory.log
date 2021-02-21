@@ -267,3 +267,47 @@ Feb 22 04:22:22 jd_wPcJDZeiQcAi去参加第一个cookie账号开的团
 Feb 22 04:22:25 
 Feb 22 04:22:25 🔔京喜工厂, 结束! 🕛 142.315 秒
 Feb 22 04:22:25 
+Feb 22 05:20:00 
+Feb 22 05:20:00 🔔京喜工厂, 开始!
+Feb 22 05:20:01 
+Feb 22 05:20:01 ====================共有1个京东账号Cookie=========
+Feb 22 05:20:01 
+Feb 22 05:20:01 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 5:20:01 AM=====================
+Feb 22 05:20:01 
+Feb 22 05:20:07 开始获取京喜工厂配置文件
+Feb 22 05:20:07 
+Feb 22 05:20:07 tuanActiveId: 6S9y4sJUfA2vPQP6TLdVIQ==
+Feb 22 05:20:07 共1个京东账号
+Feb 22 05:20:07 
+Feb 22 05:20:07 您提供了2个账号的京喜工厂助力码
+Feb 22 05:20:07 
+Feb 22 05:20:08 
+Feb 22 05:20:08 ******开始【京东账号1】jd_wPcJDZeiQcAi*********
+Feb 22 05:20:08 
+Feb 22 05:20:08 
+Feb 22 05:20:08 ==============📣系统通知📣==============
+Feb 22 05:20:08 京喜工厂
+Feb 22 05:20:08 【提示】cookie已失效
+Feb 22 05:20:08 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 05:20:08 请重新登录获取
+Feb 22 05:20:08 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 05:20:08 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 05:20:08 
+Feb 22 05:20:11 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 05:20:11 
+Feb 22 05:20:11 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 05:20:11 
+Feb 22 05:20:11 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 05:20:11 
+Feb 22 05:20:11 token is not exist
+Feb 22 05:20:11 
+Feb 22 05:20:12 Telegram发送通知消息完成。
+Feb 22 05:20:12 
+Feb 22 05:20:12 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 05:20:12 
+Feb 22 05:20:12 jd_wPcJDZeiQcAi去参加第一个cookie账号开的团
+Feb 22 05:20:12 "Response code 503 (Service Temporarily Unavailable)"
+Feb 22 05:20:15 
+Feb 22 05:20:15 🔔京喜工厂, 结束! 🕛 14.345 秒
+Feb 22 05:20:15 
+Feb 22 05:20:18 "Response code 503 (Service Temporarily Unavailable)"

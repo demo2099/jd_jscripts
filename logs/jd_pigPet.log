@@ -203,3 +203,72 @@ Feb 22 04:12:07
 Feb 22 04:12:07 
 Feb 22 04:12:07 🔔金融养猪, 结束! 🕛 5.27 秒
 Feb 22 04:12:07 
+Feb 22 05:12:00 
+Feb 22 05:12:00 🔔金融养猪, 开始!
+Feb 22 05:12:00 
+Feb 22 05:12:00 ====================共有1个京东账号Cookie=========
+Feb 22 05:12:00 
+Feb 22 05:12:00 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 5:12:00 AM=====================
+Feb 22 05:12:00 
+Feb 22 05:12:03 
+Feb 22 05:12:03 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 22 05:12:03 
+Feb 22 05:12:03 
+Feb 22 05:12:03 ==============📣系统通知📣==============
+Feb 22 05:12:03 金融养猪
+Feb 22 05:12:03 【提示】cookie已失效
+Feb 22 05:12:03 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 05:12:03 请重新登录获取
+Feb 22 05:12:03 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 05:12:03 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 05:12:03 
+Feb 22 05:12:06 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 05:12:06 
+Feb 22 05:12:06 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 05:12:06 
+Feb 22 05:12:06 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 05:12:06 
+Feb 22 05:12:07 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 05:12:07 
+Feb 22 05:12:07 token is not exist
+Feb 22 05:12:07 
+Feb 22 05:14:17 telegram发送通知消息失败！！
+Feb 22 05:14:17 
+Feb 22 05:14:17 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 05:14:17     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 05:14:17     at Object.onceWrapper (events.js:421:26)
+Feb 22 05:14:17     at ClientRequest.emit (events.js:326:22)
+Feb 22 05:14:17     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 05:14:17     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 05:14:17     at TLSSocket.emit (events.js:314:20)
+Feb 22 05:14:17     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 05:14:17     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 05:14:17     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 05:14:17     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 05:14:17   code: 'ETIMEDOUT',
+Feb 22 05:14:17   timings: {
+Feb 22 05:14:17     start: 1613941926607,
+Feb 22 05:14:17     socket: 1613941926608,
+Feb 22 05:14:17     lookup: 1613941926610,
+Feb 22 05:14:17     connect: undefined,
+Feb 22 05:14:17     secureConnect: undefined,
+Feb 22 05:14:17     upload: undefined,
+Feb 22 05:14:17     response: undefined,
+Feb 22 05:14:17     end: undefined,
+Feb 22 05:14:17     error: 1613942057471,
+Feb 22 05:14:17     abort: undefined,
+Feb 22 05:14:17     phases: {
+Feb 22 05:14:17       wait: 1,
+Feb 22 05:14:17       dns: 2,
+Feb 22 05:14:17       tcp: undefined,
+Feb 22 05:14:17       tls: undefined,
+Feb 22 05:14:17       request: undefined,
+Feb 22 05:14:17       firstByte: undefined,
+Feb 22 05:14:17       download: undefined,
+Feb 22 05:14:17       total: 130864
+Feb 22 05:14:17     }
+Feb 22 05:14:17   }
+Feb 22 05:14:17 }
+Feb 22 05:14:17 
+Feb 22 05:14:17 🔔金融养猪, 结束! 🕛 137.106 秒
+Feb 22 05:14:17 
