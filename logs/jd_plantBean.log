@@ -1,0 +1,77 @@
+Feb 21 20:00:05 
+Feb 21 20:00:05 🔔京东种豆得豆, 开始!
+Feb 21 20:00:05 开始获取种豆得豆配置文件
+Feb 21 20:00:05 
+Feb 21 20:00:05 
+Feb 21 20:00:05 ====================共有1个京东账号Cookie=========
+Feb 21 20:00:05 
+Feb 21 20:00:05 ==================脚本执行- 北京时间(UTC+8)：2/21/2021, 8:00:05 PM=====================
+Feb 21 20:00:05 
+Feb 21 20:00:05 共1个京东账号
+Feb 21 20:00:05 
+Feb 21 20:00:05 您提供了1个账号的种豆得豆助力码
+Feb 21 20:00:05 
+Feb 21 20:00:17 
+Feb 21 20:00:17 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 21 20:00:17 
+Feb 21 20:00:17 
+Feb 21 20:00:17 ==============📣系统通知📣==============
+Feb 21 20:00:17 京东种豆得豆
+Feb 21 20:00:17 【提示】cookie已失效
+Feb 21 20:00:17 京东账号1 jd_wPcJDZeiQcAi
+Feb 21 20:00:17 请重新登录获取
+Feb 21 20:00:17 https://bean.m.jd.com/bean/signIndex.action
+Feb 21 20:00:17 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 21 20:00:17 
+Feb 21 20:00:29 发送通知调用API失败！！
+Feb 21 20:00:29 
+Feb 21 20:00:29 RequestError: getaddrinfo EAI_AGAIN sc.ftqq.com
+Feb 21 20:00:29     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 21 20:00:29     at Object.onceWrapper (events.js:421:26)
+Feb 21 20:00:29     at ClientRequest.emit (events.js:326:22)
+Feb 21 20:00:29     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 21 20:00:29     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 21 20:00:29     at TLSSocket.emit (events.js:314:20)
+Feb 21 20:00:29     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 21 20:00:29     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 21 20:00:29     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 21 20:00:29     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+Feb 21 20:00:29   code: 'EAI_AGAIN',
+Feb 21 20:00:29   timings: {
+Feb 21 20:00:29     start: 1613908823959,
+Feb 21 20:00:29     socket: 1613908823961,
+Feb 21 20:00:29     lookup: 1613908829019,
+Feb 21 20:00:29     connect: undefined,
+Feb 21 20:00:29     secureConnect: undefined,
+Feb 21 20:00:29     upload: undefined,
+Feb 21 20:00:29     response: undefined,
+Feb 21 20:00:29     end: undefined,
+Feb 21 20:00:29     error: 1613908829022,
+Feb 21 20:00:29     abort: undefined,
+Feb 21 20:00:29     phases: {
+Feb 21 20:00:29       wait: 2,
+Feb 21 20:00:29       dns: 5058,
+Feb 21 20:00:29       tcp: undefined,
+Feb 21 20:00:29       tls: undefined,
+Feb 21 20:00:29       request: undefined,
+Feb 21 20:00:29       firstByte: undefined,
+Feb 21 20:00:29       download: undefined,
+Feb 21 20:00:29       total: 5063
+Feb 21 20:00:29     }
+Feb 21 20:00:29   }
+Feb 21 20:00:29 }
+Feb 21 20:00:29 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 21 20:00:29 
+Feb 21 20:00:29 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 21 20:00:29 
+Feb 21 20:00:29 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 21 20:00:29 
+Feb 21 20:00:30 token is not exist
+Feb 21 20:00:30 
+Feb 21 20:00:30 Telegram发送通知消息完成。
+Feb 21 20:00:30 
+Feb 21 20:00:30 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 21 20:00:30 
+Feb 21 20:00:30 
+Feb 21 20:00:30 🔔京东种豆得豆, 结束! 🕛 26.48 秒
+Feb 21 20:00:30 
