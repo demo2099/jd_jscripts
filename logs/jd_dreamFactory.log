@@ -189,3 +189,81 @@ Feb 22 03:20:19 参团失败：{"msg":"登录京东账号才可以继续游戏�
 Feb 22 03:20:22 
 Feb 22 03:20:22 🔔京喜工厂, 结束! 🕛 18.579 秒
 Feb 22 03:20:22 
+Feb 22 04:20:03 
+Feb 22 04:20:03 🔔京喜工厂, 开始!
+Feb 22 04:20:03 
+Feb 22 04:20:03 ====================共有1个京东账号Cookie=========
+Feb 22 04:20:03 
+Feb 22 04:20:03 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 4:20:03 AM=====================
+Feb 22 04:20:03 
+Feb 22 04:20:08 开始获取京喜工厂配置文件
+Feb 22 04:20:08 
+Feb 22 04:20:08 tuanActiveId: 6S9y4sJUfA2vPQP6TLdVIQ==
+Feb 22 04:20:08 共1个京东账号
+Feb 22 04:20:08 
+Feb 22 04:20:08 您提供了2个账号的京喜工厂助力码
+Feb 22 04:20:08 
+Feb 22 04:20:09 
+Feb 22 04:20:09 ******开始【京东账号1】jd_wPcJDZeiQcAi*********
+Feb 22 04:20:09 
+Feb 22 04:20:09 
+Feb 22 04:20:09 ==============📣系统通知📣==============
+Feb 22 04:20:09 京喜工厂
+Feb 22 04:20:09 【提示】cookie已失效
+Feb 22 04:20:09 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 04:20:09 请重新登录获取
+Feb 22 04:20:09 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 04:20:09 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 04:20:09 
+Feb 22 04:20:12 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 04:20:12 
+Feb 22 04:20:12 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 04:20:12 
+Feb 22 04:20:12 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 04:20:12 
+Feb 22 04:20:12 token is not exist
+Feb 22 04:20:12 
+Feb 22 04:20:13 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 04:20:13 
+Feb 22 04:20:13 "Response code 503 (Service Temporarily Unavailable)"
+Feb 22 04:22:22 telegram发送通知消息失败！！
+Feb 22 04:22:22 
+Feb 22 04:22:22 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 04:22:22     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 04:22:22     at Object.onceWrapper (events.js:421:26)
+Feb 22 04:22:22     at ClientRequest.emit (events.js:326:22)
+Feb 22 04:22:22     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 04:22:22     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 04:22:22     at TLSSocket.emit (events.js:314:20)
+Feb 22 04:22:22     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 04:22:22     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 04:22:22     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 04:22:22     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 04:22:22   code: 'ETIMEDOUT',
+Feb 22 04:22:22   timings: {
+Feb 22 04:22:22     start: 1613938812472,
+Feb 22 04:22:22     socket: 1613938812473,
+Feb 22 04:22:22     lookup: 1613938812475,
+Feb 22 04:22:22     connect: undefined,
+Feb 22 04:22:22     secureConnect: undefined,
+Feb 22 04:22:22     upload: undefined,
+Feb 22 04:22:22     response: undefined,
+Feb 22 04:22:22     end: undefined,
+Feb 22 04:22:22     error: 1613938942455,
+Feb 22 04:22:22     abort: undefined,
+Feb 22 04:22:22     phases: {
+Feb 22 04:22:22       wait: 1,
+Feb 22 04:22:22       dns: 2,
+Feb 22 04:22:22       tcp: undefined,
+Feb 22 04:22:22       tls: undefined,
+Feb 22 04:22:22       request: undefined,
+Feb 22 04:22:22       firstByte: undefined,
+Feb 22 04:22:22       download: undefined,
+Feb 22 04:22:22       total: 129983
+Feb 22 04:22:22     }
+Feb 22 04:22:22   }
+Feb 22 04:22:22 }
+Feb 22 04:22:22 jd_wPcJDZeiQcAi去参加第一个cookie账号开的团
+Feb 22 04:22:25 
+Feb 22 04:22:25 🔔京喜工厂, 结束! 🕛 142.315 秒
+Feb 22 04:22:25 
