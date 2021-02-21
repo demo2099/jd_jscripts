@@ -1,71 +1,34 @@
-Feb 21 21:08:03 
-Feb 21 21:08:03 🔔✈️天天加速, 开始!
-Feb 21 21:08:03 
-Feb 21 21:08:03 ====================共有1个京东账号Cookie=========
-Feb 21 21:08:03 
-Feb 21 21:08:03 ==================脚本执行- 北京时间(UTC+8)：2/21/2021, 9:08:03 PM=====================
-Feb 21 21:08:03 
-Feb 21 21:08:07 
-Feb 21 21:08:07 开始【京东账号1】jd_wPcJDZeiQcAi
-Feb 21 21:08:07 
-Feb 21 21:08:07 
-Feb 21 21:08:07 ==============📣系统通知📣==============
-Feb 21 21:08:07 ✈️天天加速
-Feb 21 21:08:07 【提示】cookie已失效
-Feb 21 21:08:07 京东账号1 jd_wPcJDZeiQcAi
-Feb 21 21:08:07 请重新登录获取
-Feb 21 21:08:07 https://bean.m.jd.com/bean/signIndex.action
-Feb 21 21:08:07 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
-Feb 21 21:08:07 
-Feb 21 21:08:15 发送通知调用API失败！！
-Feb 21 21:08:15 
-Feb 21 21:08:15 RequestError: getaddrinfo EAI_AGAIN sc.ftqq.com
-Feb 21 21:08:15     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
-Feb 21 21:08:15     at Object.onceWrapper (events.js:421:26)
-Feb 21 21:08:15     at ClientRequest.emit (events.js:326:22)
-Feb 21 21:08:15     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
-Feb 21 21:08:15     at TLSSocket.socketErrorListener (_http_client.js:427:9)
-Feb 21 21:08:15     at TLSSocket.emit (events.js:314:20)
-Feb 21 21:08:15     at emitErrorNT (internal/streams/destroy.js:92:8)
-Feb 21 21:08:15     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
-Feb 21 21:08:15     at processTicksAndRejections (internal/process/task_queues.js:84:21)
-Feb 21 21:08:15     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
-Feb 21 21:08:15   code: 'EAI_AGAIN',
-Feb 21 21:08:15   timings: {
-Feb 21 21:08:15     start: 1613912890247,
-Feb 21 21:08:15     socket: 1613912890248,
-Feb 21 21:08:15     lookup: 1613912895258,
-Feb 21 21:08:15     connect: undefined,
-Feb 21 21:08:15     secureConnect: undefined,
-Feb 21 21:08:15     upload: undefined,
-Feb 21 21:08:15     response: undefined,
-Feb 21 21:08:15     end: undefined,
-Feb 21 21:08:15     error: 1613912895261,
-Feb 21 21:08:15     abort: undefined,
-Feb 21 21:08:15     phases: {
-Feb 21 21:08:15       wait: 1,
-Feb 21 21:08:15       dns: 5010,
-Feb 21 21:08:15       tcp: undefined,
-Feb 21 21:08:15       tls: undefined,
-Feb 21 21:08:15       request: undefined,
-Feb 21 21:08:15       firstByte: undefined,
-Feb 21 21:08:15       download: undefined,
-Feb 21 21:08:15       total: 5014
-Feb 21 21:08:15     }
-Feb 21 21:08:15   }
-Feb 21 21:08:15 }
-Feb 21 21:08:15 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
-Feb 21 21:08:15 
-Feb 21 21:08:15 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
-Feb 21 21:08:15 
-Feb 21 21:08:15 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
-Feb 21 21:08:15 
-Feb 21 21:08:15 token is not exist
-Feb 21 21:08:15 
-Feb 21 21:08:16 Telegram发送通知消息完成。
-Feb 21 21:08:16 
-Feb 21 21:08:16 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
-Feb 21 21:08:16 
-Feb 21 21:08:16 
-Feb 21 21:08:16 🔔✈️天天加速, 结束! 🕛 13.375 秒
-Feb 21 21:08:16 
+Feb 22 00:08:01 
+Feb 22 00:08:01 🔔✈️天天加速, 开始!
+Feb 22 00:08:01 
+Feb 22 00:08:01 ====================共有1个京东账号Cookie=========
+Feb 22 00:08:01 
+Feb 22 00:08:02 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 12:08:01 AM=====================
+Feb 22 00:08:02 
+Feb 22 00:08:04 
+Feb 22 00:08:04 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 22 00:08:04 
+Feb 22 00:08:04 
+Feb 22 00:08:04 ==============📣系统通知📣==============
+Feb 22 00:08:04 ✈️天天加速
+Feb 22 00:08:04 【提示】cookie已失效
+Feb 22 00:08:04 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 00:08:04 请重新登录获取
+Feb 22 00:08:04 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 00:08:04 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 00:08:04 
+Feb 22 00:08:07 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 00:08:07 
+Feb 22 00:08:07 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 00:08:07 
+Feb 22 00:08:07 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 00:08:07 
+Feb 22 00:08:08 token is not exist
+Feb 22 00:08:08 
+Feb 22 00:08:08 Telegram发送通知消息完成。
+Feb 22 00:08:08 
+Feb 22 00:08:08 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 00:08:08 
+Feb 22 00:08:08 
+Feb 22 00:08:08 🔔✈️天天加速, 结束! 🕛 6.548 秒
+Feb 22 00:08:08 
