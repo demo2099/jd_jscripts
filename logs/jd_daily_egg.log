@@ -241,3 +241,72 @@ Feb 22 05:18:07
 Feb 22 05:18:07 
 Feb 22 05:18:07 🔔天天提鹅, 结束! 🕛 6.838 秒
 Feb 22 05:18:07 
+Feb 22 06:18:02 
+Feb 22 06:18:02 🔔天天提鹅, 开始!
+Feb 22 06:18:02 
+Feb 22 06:18:02 ====================共有1个京东账号Cookie=========
+Feb 22 06:18:02 
+Feb 22 06:18:02 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 6:18:02 AM=====================
+Feb 22 06:18:02 
+Feb 22 06:18:04 
+Feb 22 06:18:04 ***********开始【京东账号1】jd_wPcJDZeiQcAi********
+Feb 22 06:18:04 
+Feb 22 06:18:04 
+Feb 22 06:18:04 ==============📣系统通知📣==============
+Feb 22 06:18:04 天天提鹅
+Feb 22 06:18:04 【提示】cookie已失效
+Feb 22 06:18:04 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 06:18:04 请重新登录获取
+Feb 22 06:18:04 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 06:18:04 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 06:18:04 
+Feb 22 06:18:07 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 06:18:07 
+Feb 22 06:18:07 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 06:18:07 
+Feb 22 06:18:07 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 06:18:07 
+Feb 22 06:18:07 token is not exist
+Feb 22 06:18:07 
+Feb 22 06:18:07 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 06:18:07 
+Feb 22 06:20:18 telegram发送通知消息失败！！
+Feb 22 06:20:18 
+Feb 22 06:20:18 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 06:20:18     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 06:20:18     at Object.onceWrapper (events.js:421:26)
+Feb 22 06:20:18     at ClientRequest.emit (events.js:326:22)
+Feb 22 06:20:18     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 06:20:18     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 06:20:18     at TLSSocket.emit (events.js:314:20)
+Feb 22 06:20:18     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 06:20:18     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 06:20:18     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 06:20:18     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 06:20:18   code: 'ETIMEDOUT',
+Feb 22 06:20:18   timings: {
+Feb 22 06:20:18     start: 1613945887213,
+Feb 22 06:20:18     socket: 1613945887214,
+Feb 22 06:20:18     lookup: 1613945887215,
+Feb 22 06:20:18     connect: undefined,
+Feb 22 06:20:18     secureConnect: undefined,
+Feb 22 06:20:18     upload: undefined,
+Feb 22 06:20:18     response: undefined,
+Feb 22 06:20:18     end: undefined,
+Feb 22 06:20:18     error: 1613946018293,
+Feb 22 06:20:18     abort: undefined,
+Feb 22 06:20:18     phases: {
+Feb 22 06:20:18       wait: 1,
+Feb 22 06:20:18       dns: 1,
+Feb 22 06:20:18       tcp: undefined,
+Feb 22 06:20:18       tls: undefined,
+Feb 22 06:20:18       request: undefined,
+Feb 22 06:20:18       firstByte: undefined,
+Feb 22 06:20:18       download: undefined,
+Feb 22 06:20:18       total: 131080
+Feb 22 06:20:18     }
+Feb 22 06:20:18   }
+Feb 22 06:20:18 }
+Feb 22 06:20:18 
+Feb 22 06:20:18 🔔天天提鹅, 结束! 🕛 135.968 秒
+Feb 22 06:20:18 

@@ -100,3 +100,72 @@ Feb 22 04:15:12
 Feb 22 04:15:12 
 Feb 22 04:15:12 🔔宠汪汪, 结束! 🕛 8.662 秒
 Feb 22 04:15:12 
+Feb 22 06:15:03 
+Feb 22 06:15:03 🔔宠汪汪, 开始!
+Feb 22 06:15:03 
+Feb 22 06:15:03 ====================共有1个京东账号Cookie=========
+Feb 22 06:15:03 
+Feb 22 06:15:03 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 6:15:03 AM=====================
+Feb 22 06:15:03 
+Feb 22 06:15:09 
+Feb 22 06:15:09 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 22 06:15:09 
+Feb 22 06:15:09 
+Feb 22 06:15:09 ==============📣系统通知📣==============
+Feb 22 06:15:09 宠汪汪
+Feb 22 06:15:09 【提示】cookie已失效
+Feb 22 06:15:09 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 06:15:09 请重新登录获取
+Feb 22 06:15:09 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 06:15:09 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 06:15:09 
+Feb 22 06:15:12 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 06:15:12 
+Feb 22 06:15:12 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 06:15:12 
+Feb 22 06:15:12 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 06:15:12 
+Feb 22 06:15:13 token is not exist
+Feb 22 06:15:13 
+Feb 22 06:15:13 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 06:15:13 
+Feb 22 06:17:24 telegram发送通知消息失败！！
+Feb 22 06:17:24 
+Feb 22 06:17:24 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 06:17:24     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 06:17:24     at Object.onceWrapper (events.js:421:26)
+Feb 22 06:17:24     at ClientRequest.emit (events.js:326:22)
+Feb 22 06:17:24     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 06:17:24     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 06:17:24     at TLSSocket.emit (events.js:314:20)
+Feb 22 06:17:24     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 06:17:24     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 06:17:24     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 06:17:24     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 06:17:24   code: 'ETIMEDOUT',
+Feb 22 06:17:24   timings: {
+Feb 22 06:17:24     start: 1613945712997,
+Feb 22 06:17:24     socket: 1613945713003,
+Feb 22 06:17:24     lookup: 1613945713003,
+Feb 22 06:17:24     connect: undefined,
+Feb 22 06:17:24     secureConnect: undefined,
+Feb 22 06:17:24     upload: undefined,
+Feb 22 06:17:24     response: undefined,
+Feb 22 06:17:24     end: undefined,
+Feb 22 06:17:24     error: 1613945844212,
+Feb 22 06:17:24     abort: undefined,
+Feb 22 06:17:24     phases: {
+Feb 22 06:17:24       wait: 6,
+Feb 22 06:17:24       dns: 0,
+Feb 22 06:17:24       tcp: undefined,
+Feb 22 06:17:24       tls: undefined,
+Feb 22 06:17:24       request: undefined,
+Feb 22 06:17:24       firstByte: undefined,
+Feb 22 06:17:24       download: undefined,
+Feb 22 06:17:24       total: 131215
+Feb 22 06:17:24     }
+Feb 22 06:17:24   }
+Feb 22 06:17:24 }
+Feb 22 06:17:24 
+Feb 22 06:17:24 🔔宠汪汪, 结束! 🕛 140.828 秒
+Feb 22 06:17:24 
