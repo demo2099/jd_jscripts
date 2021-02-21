@@ -48,3 +48,87 @@ Feb 21 20:20:26
 Feb 21 20:20:26 🔔京喜工厂, 结束! 🕛 22.263 秒
 Feb 21 20:20:26 
 Feb 21 20:20:28 "Response code 503 (Service Temporarily Unavailable)"
+Feb 21 21:20:03 
+Feb 21 21:20:03 🔔京喜工厂, 开始!
+Feb 21 21:20:03 
+Feb 21 21:20:03 ====================共有1个京东账号Cookie=========
+Feb 21 21:20:03 
+Feb 21 21:20:03 ==================脚本执行- 北京时间(UTC+8)：2/21/2021, 9:20:03 PM=====================
+Feb 21 21:20:03 
+Feb 21 21:20:08 开始获取京喜工厂配置文件
+Feb 21 21:20:08 
+Feb 21 21:20:08 tuanActiveId: 6S9y4sJUfA2vPQP6TLdVIQ==
+Feb 21 21:20:08 共1个京东账号
+Feb 21 21:20:08 
+Feb 21 21:20:08 您提供了2个账号的京喜工厂助力码
+Feb 21 21:20:08 
+Feb 21 21:20:09 
+Feb 21 21:20:09 ******开始【京东账号1】jd_wPcJDZeiQcAi*********
+Feb 21 21:20:09 
+Feb 21 21:20:09 
+Feb 21 21:20:09 ==============📣系统通知📣==============
+Feb 21 21:20:09 京喜工厂
+Feb 21 21:20:09 【提示】cookie已失效
+Feb 21 21:20:09 京东账号1 jd_wPcJDZeiQcAi
+Feb 21 21:20:09 请重新登录获取
+Feb 21 21:20:09 https://bean.m.jd.com/bean/signIndex.action
+Feb 21 21:20:09 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 21 21:20:09 
+Feb 21 21:20:15 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 21 21:20:15 
+Feb 21 21:20:15 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 21 21:20:15 
+Feb 21 21:20:15 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 21 21:20:15 
+Feb 21 21:20:15 token is not exist
+Feb 21 21:20:15 
+Feb 21 21:20:15 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 21 21:20:15 
+Feb 21 21:22:25 telegram发送通知消息失败！！
+Feb 21 21:22:25 
+Feb 21 21:22:25 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 21 21:22:25     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 21 21:22:25     at Object.onceWrapper (events.js:421:26)
+Feb 21 21:22:25     at ClientRequest.emit (events.js:326:22)
+Feb 21 21:22:25     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 21 21:22:25     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 21 21:22:25     at TLSSocket.emit (events.js:314:20)
+Feb 21 21:22:25     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 21 21:22:25     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 21 21:22:25     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 21 21:22:25     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 21 21:22:25   code: 'ETIMEDOUT',
+Feb 21 21:22:25   timings: {
+Feb 21 21:22:25     start: 1613913615198,
+Feb 21 21:22:25     socket: 1613913615199,
+Feb 21 21:22:25     lookup: 1613913615201,
+Feb 21 21:22:25     connect: undefined,
+Feb 21 21:22:25     secureConnect: undefined,
+Feb 21 21:22:25     upload: undefined,
+Feb 21 21:22:25     response: undefined,
+Feb 21 21:22:25     end: undefined,
+Feb 21 21:22:25     error: 1613913745910,
+Feb 21 21:22:25     abort: undefined,
+Feb 21 21:22:25     phases: {
+Feb 21 21:22:25       wait: 1,
+Feb 21 21:22:25       dns: 2,
+Feb 21 21:22:25       tcp: undefined,
+Feb 21 21:22:25       tls: undefined,
+Feb 21 21:22:25       request: undefined,
+Feb 21 21:22:25       firstByte: undefined,
+Feb 21 21:22:25       download: undefined,
+Feb 21 21:22:25       total: 130712
+Feb 21 21:22:25     }
+Feb 21 21:22:25   }
+Feb 21 21:22:25 }
+Feb 21 21:22:25 jd_wPcJDZeiQcAi去参加第一个cookie账号开的团
+Feb 21 21:22:26 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613913746,"ret":10001}
+Feb 21 21:22:27 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613913747,"ret":10001}
+Feb 21 21:22:27 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613913747,"ret":10001}
+Feb 21 21:22:28 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613913748,"ret":10001}
+Feb 21 21:22:29 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613913749,"ret":10001}
+Feb 21 21:22:29 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613913749,"ret":10001}
+Feb 21 21:22:30 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613913750,"ret":10001}
+Feb 21 21:22:31 
+Feb 21 21:22:31 🔔京喜工厂, 结束! 🕛 147.853 秒
+Feb 21 21:22:31 

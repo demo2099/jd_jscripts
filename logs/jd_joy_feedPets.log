@@ -32,3 +32,72 @@ Feb 21 20:15:27
 Feb 21 20:15:27 
 Feb 21 20:15:27 🔔宠汪汪🐕喂食, 结束! 🕛 23.53 秒
 Feb 21 20:15:27 
+Feb 21 21:15:03 
+Feb 21 21:15:03 🔔宠汪汪🐕喂食, 开始!
+Feb 21 21:15:03 
+Feb 21 21:15:03 ====================共有1个京东账号Cookie=========
+Feb 21 21:15:03 
+Feb 21 21:15:03 ==================脚本执行- 北京时间(UTC+8)：2/21/2021, 9:15:03 PM=====================
+Feb 21 21:15:03 
+Feb 21 21:15:05 
+Feb 21 21:15:05 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 21 21:15:05 
+Feb 21 21:15:05 
+Feb 21 21:15:05 ==============📣系统通知📣==============
+Feb 21 21:15:05 宠汪汪🐕喂食
+Feb 21 21:15:05 【提示】cookie已失效
+Feb 21 21:15:05 京东账号1 jd_wPcJDZeiQcAi
+Feb 21 21:15:05 请重新登录获取
+Feb 21 21:15:05 https://bean.m.jd.com/bean/signIndex.action
+Feb 21 21:15:05 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 21 21:15:05 
+Feb 21 21:15:10 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 21 21:15:10 
+Feb 21 21:15:10 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 21 21:15:10 
+Feb 21 21:15:10 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 21 21:15:10 
+Feb 21 21:15:11 token is not exist
+Feb 21 21:15:11 
+Feb 21 21:15:11 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 21 21:15:11 
+Feb 21 21:17:20 telegram发送通知消息失败！！
+Feb 21 21:17:20 
+Feb 21 21:17:20 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 21 21:17:20     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 21 21:17:20     at Object.onceWrapper (events.js:421:26)
+Feb 21 21:17:20     at ClientRequest.emit (events.js:326:22)
+Feb 21 21:17:20     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 21 21:17:20     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 21 21:17:20     at TLSSocket.emit (events.js:314:20)
+Feb 21 21:17:20     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 21 21:17:20     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 21 21:17:20     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 21 21:17:20     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 21 21:17:20   code: 'ETIMEDOUT',
+Feb 21 21:17:20   timings: {
+Feb 21 21:17:20     start: 1613913310931,
+Feb 21 21:17:20     socket: 1613913310932,
+Feb 21 21:17:20     lookup: 1613913310932,
+Feb 21 21:17:20     connect: undefined,
+Feb 21 21:17:20     secureConnect: undefined,
+Feb 21 21:17:20     upload: undefined,
+Feb 21 21:17:20     response: undefined,
+Feb 21 21:17:20     end: undefined,
+Feb 21 21:17:20     error: 1613913440763,
+Feb 21 21:17:20     abort: undefined,
+Feb 21 21:17:20     phases: {
+Feb 21 21:17:20       wait: 1,
+Feb 21 21:17:20       dns: 0,
+Feb 21 21:17:20       tcp: undefined,
+Feb 21 21:17:20       tls: undefined,
+Feb 21 21:17:20       request: undefined,
+Feb 21 21:17:20       firstByte: undefined,
+Feb 21 21:17:20       download: undefined,
+Feb 21 21:17:20       total: 129832
+Feb 21 21:17:20     }
+Feb 21 21:17:20   }
+Feb 21 21:17:20 }
+Feb 21 21:17:20 
+Feb 21 21:17:20 🔔宠汪汪🐕喂食, 结束! 🕛 137.57 秒
+Feb 21 21:17:20 

@@ -1,0 +1,73 @@
+Feb 21 21:11:02 
+Feb 21 21:11:02 🔔东东超市, 开始!
+Feb 21 21:11:02 
+Feb 21 21:11:02 ====================共有1个京东账号Cookie=========
+Feb 21 21:11:02 
+Feb 21 21:11:02 ==================脚本执行- 北京时间(UTC+8)：2/21/2021, 9:11:02 PM=====================
+Feb 21 21:11:02 
+Feb 21 21:11:02 共1个京东账号
+Feb 21 21:11:02 
+Feb 21 21:11:04 
+Feb 21 21:11:04 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 21 21:11:04 
+Feb 21 21:11:04 
+Feb 21 21:11:04 ==============📣系统通知📣==============
+Feb 21 21:11:04 东东超市
+Feb 21 21:11:04 【提示】cookie已失效
+Feb 21 21:11:04 京东账号1 jd_wPcJDZeiQcAi
+Feb 21 21:11:04 请重新登录获取
+Feb 21 21:11:04 https://bean.m.jd.com/bean/signIndex.action
+Feb 21 21:11:04 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 21 21:11:04 
+Feb 21 21:11:11 发送通知调用API失败！！
+Feb 21 21:11:11 
+Feb 21 21:11:11 RequestError: getaddrinfo EAI_AGAIN sc.ftqq.com
+Feb 21 21:11:11     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 21 21:11:11     at Object.onceWrapper (events.js:421:26)
+Feb 21 21:11:11     at ClientRequest.emit (events.js:326:22)
+Feb 21 21:11:11     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 21 21:11:11     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 21 21:11:11     at TLSSocket.emit (events.js:314:20)
+Feb 21 21:11:11     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 21 21:11:11     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 21 21:11:11     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 21 21:11:11     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+Feb 21 21:11:11   code: 'EAI_AGAIN',
+Feb 21 21:11:11   timings: {
+Feb 21 21:11:11     start: 1613913066842,
+Feb 21 21:11:11     socket: 1613913066844,
+Feb 21 21:11:11     lookup: 1613913071856,
+Feb 21 21:11:11     connect: undefined,
+Feb 21 21:11:11     secureConnect: undefined,
+Feb 21 21:11:11     upload: undefined,
+Feb 21 21:11:11     response: undefined,
+Feb 21 21:11:11     end: undefined,
+Feb 21 21:11:11     error: 1613913071857,
+Feb 21 21:11:11     abort: undefined,
+Feb 21 21:11:11     phases: {
+Feb 21 21:11:11       wait: 2,
+Feb 21 21:11:11       dns: 5012,
+Feb 21 21:11:11       tcp: undefined,
+Feb 21 21:11:11       tls: undefined,
+Feb 21 21:11:11       request: undefined,
+Feb 21 21:11:11       firstByte: undefined,
+Feb 21 21:11:11       download: undefined,
+Feb 21 21:11:11       total: 5015
+Feb 21 21:11:11     }
+Feb 21 21:11:11   }
+Feb 21 21:11:11 }
+Feb 21 21:11:11 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 21 21:11:11 
+Feb 21 21:11:11 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 21 21:11:11 
+Feb 21 21:11:11 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 21 21:11:11 
+Feb 21 21:11:12 token is not exist
+Feb 21 21:11:12 
+Feb 21 21:11:12 Telegram发送通知消息完成。
+Feb 21 21:11:12 
+Feb 21 21:11:12 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 21 21:11:12 
+Feb 21 21:11:12 
+Feb 21 21:11:12 🔔东东超市, 结束! 🕛 9.843 秒
+Feb 21 21:11:12 
