@@ -192,3 +192,43 @@ Feb 22 12:08:10 token is not exist
 Feb 22 12:08:10 
 Feb 22 12:08:10 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
 Feb 22 12:08:10 
+Feb 22 12:10:20 telegram发送通知消息失败！！
+Feb 22 12:10:20 
+Feb 22 12:10:20 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 12:10:20     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 12:10:20     at Object.onceWrapper (events.js:421:26)
+Feb 22 12:10:20     at ClientRequest.emit (events.js:326:22)
+Feb 22 12:10:20     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 12:10:20     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 12:10:20     at TLSSocket.emit (events.js:314:20)
+Feb 22 12:10:20     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 12:10:20     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 12:10:20     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 12:10:20     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 12:10:20   code: 'ETIMEDOUT',
+Feb 22 12:10:20   timings: {
+Feb 22 12:10:20     start: 1613966889999,
+Feb 22 12:10:20     socket: 1613966890000,
+Feb 22 12:10:20     lookup: 1613966890000,
+Feb 22 12:10:20     connect: undefined,
+Feb 22 12:10:20     secureConnect: undefined,
+Feb 22 12:10:20     upload: undefined,
+Feb 22 12:10:20     response: undefined,
+Feb 22 12:10:20     end: undefined,
+Feb 22 12:10:20     error: 1613967020532,
+Feb 22 12:10:20     abort: undefined,
+Feb 22 12:10:20     phases: {
+Feb 22 12:10:20       wait: 1,
+Feb 22 12:10:20       dns: 0,
+Feb 22 12:10:20       tcp: undefined,
+Feb 22 12:10:20       tls: undefined,
+Feb 22 12:10:20       request: undefined,
+Feb 22 12:10:20       firstByte: undefined,
+Feb 22 12:10:20       download: undefined,
+Feb 22 12:10:20       total: 130533
+Feb 22 12:10:20     }
+Feb 22 12:10:20   }
+Feb 22 12:10:20 }
+Feb 22 12:10:20 
+Feb 22 12:10:20 🔔✈️天天加速, 结束! 🕛 138.734 秒
+Feb 22 12:10:20 
