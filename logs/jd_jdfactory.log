@@ -422,3 +422,80 @@ Feb 22 06:36:09
 Feb 22 06:36:09 
 Feb 22 06:36:09 🔔东东工厂, 结束! 🕛 7.942 秒
 Feb 22 06:36:09 
+Feb 22 07:36:02 
+Feb 22 07:36:02 🔔东东工厂, 开始!
+Feb 22 07:36:02 
+Feb 22 07:36:02 ====================共有1个京东账号Cookie=========
+Feb 22 07:36:02 
+Feb 22 07:36:02 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 7:36:02 AM=====================
+Feb 22 07:36:02 
+Feb 22 07:36:02 开始获取东东工厂配置文件
+Feb 22 07:36:02 
+Feb 22 07:36:02 共1个京东账号
+Feb 22 07:36:02 
+Feb 22 07:36:02 您提供了0个账号的东东工厂助力码
+Feb 22 07:36:02 
+Feb 22 07:36:04 
+Feb 22 07:36:04 ******开始【京东账号1】jd_wPcJDZeiQcAi*********
+Feb 22 07:36:04 
+Feb 22 07:36:04 
+Feb 22 07:36:04 ==============📣系统通知📣==============
+Feb 22 07:36:04 东东工厂
+Feb 22 07:36:04 【提示】cookie已失效
+Feb 22 07:36:04 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 07:36:04 请重新登录获取
+Feb 22 07:36:04 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 07:36:04 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 07:36:04 
+Feb 22 07:38:15 发送通知调用API失败！！
+Feb 22 07:38:15 
+Feb 22 07:38:15 RequestError: connect ETIMEDOUT 220.181.136.120:443
+Feb 22 07:38:15     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 07:38:15     at Object.onceWrapper (events.js:421:26)
+Feb 22 07:38:15     at ClientRequest.emit (events.js:326:22)
+Feb 22 07:38:15     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 07:38:15     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 07:38:15     at TLSSocket.emit (events.js:314:20)
+Feb 22 07:38:15     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 07:38:15     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 07:38:15     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 07:38:15     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 07:38:15   code: 'ETIMEDOUT',
+Feb 22 07:38:15   timings: {
+Feb 22 07:38:15     start: 1613950566378,
+Feb 22 07:38:15     socket: 1613950566379,
+Feb 22 07:38:15     lookup: 1613950566380,
+Feb 22 07:38:15     connect: undefined,
+Feb 22 07:38:15     secureConnect: undefined,
+Feb 22 07:38:15     upload: undefined,
+Feb 22 07:38:15     response: undefined,
+Feb 22 07:38:15     end: undefined,
+Feb 22 07:38:15     error: 1613950695924,
+Feb 22 07:38:15     abort: undefined,
+Feb 22 07:38:15     phases: {
+Feb 22 07:38:15       wait: 1,
+Feb 22 07:38:15       dns: 1,
+Feb 22 07:38:15       tcp: undefined,
+Feb 22 07:38:15       tls: undefined,
+Feb 22 07:38:15       request: undefined,
+Feb 22 07:38:15       firstByte: undefined,
+Feb 22 07:38:15       download: undefined,
+Feb 22 07:38:15       total: 129546
+Feb 22 07:38:15     }
+Feb 22 07:38:15   }
+Feb 22 07:38:15 }
+Feb 22 07:38:15 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 07:38:15 
+Feb 22 07:38:15 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 07:38:15 
+Feb 22 07:38:15 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 07:38:15 
+Feb 22 07:38:16 token is not exist
+Feb 22 07:38:16 
+Feb 22 07:38:16 Telegram发送通知消息完成。
+Feb 22 07:38:16 
+Feb 22 07:38:16 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 07:38:16 
+Feb 22 07:38:16 
+Feb 22 07:38:16 🔔东东工厂, 结束! 🕛 134.617 秒
+Feb 22 07:38:16 

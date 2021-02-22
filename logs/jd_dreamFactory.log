@@ -389,3 +389,91 @@ Feb 22 06:22:21 jd_wPcJDZeiQcAi去参加第一个cookie账号开的团
 Feb 22 06:22:21 
 Feb 22 06:22:21 🔔京喜工厂, 结束! 🕛 140.012 秒
 Feb 22 06:22:21 
+Feb 22 07:20:02 
+Feb 22 07:20:02 🔔京喜工厂, 开始!
+Feb 22 07:20:02 
+Feb 22 07:20:02 ====================共有1个京东账号Cookie=========
+Feb 22 07:20:02 
+Feb 22 07:20:02 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 7:20:02 AM=====================
+Feb 22 07:20:02 
+Feb 22 07:20:09 开始获取京喜工厂配置文件
+Feb 22 07:20:09 
+Feb 22 07:20:09 tuanActiveId: 6S9y4sJUfA2vPQP6TLdVIQ==
+Feb 22 07:20:09 共1个京东账号
+Feb 22 07:20:09 
+Feb 22 07:20:09 您提供了2个账号的京喜工厂助力码
+Feb 22 07:20:09 
+Feb 22 07:20:10 
+Feb 22 07:20:10 ******开始【京东账号1】jd_wPcJDZeiQcAi*********
+Feb 22 07:20:10 
+Feb 22 07:20:10 
+Feb 22 07:20:10 ==============📣系统通知📣==============
+Feb 22 07:20:10 京喜工厂
+Feb 22 07:20:10 【提示】cookie已失效
+Feb 22 07:20:10 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 07:20:10 请重新登录获取
+Feb 22 07:20:10 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 07:20:10 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 07:20:10 
+Feb 22 07:20:13 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 07:20:13 
+Feb 22 07:20:13 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 07:20:13 
+Feb 22 07:20:13 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 07:20:13 
+Feb 22 07:20:14 token is not exist
+Feb 22 07:20:14 
+Feb 22 07:20:14 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 07:20:14 
+Feb 22 07:22:23 telegram发送通知消息失败！！
+Feb 22 07:22:23 
+Feb 22 07:22:23 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 07:22:23     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 07:22:23     at Object.onceWrapper (events.js:421:26)
+Feb 22 07:22:23     at ClientRequest.emit (events.js:326:22)
+Feb 22 07:22:23     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 07:22:23     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 07:22:23     at TLSSocket.emit (events.js:314:20)
+Feb 22 07:22:23     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 07:22:23     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 07:22:23     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 07:22:23     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 07:22:23   code: 'ETIMEDOUT',
+Feb 22 07:22:23   timings: {
+Feb 22 07:22:23     start: 1613949613806,
+Feb 22 07:22:23     socket: 1613949613810,
+Feb 22 07:22:23     lookup: 1613949613811,
+Feb 22 07:22:23     connect: undefined,
+Feb 22 07:22:23     secureConnect: undefined,
+Feb 22 07:22:23     upload: undefined,
+Feb 22 07:22:23     response: undefined,
+Feb 22 07:22:23     end: undefined,
+Feb 22 07:22:23     error: 1613949743610,
+Feb 22 07:22:23     abort: undefined,
+Feb 22 07:22:23     phases: {
+Feb 22 07:22:23       wait: 4,
+Feb 22 07:22:23       dns: 1,
+Feb 22 07:22:23       tcp: undefined,
+Feb 22 07:22:23       tls: undefined,
+Feb 22 07:22:23       request: undefined,
+Feb 22 07:22:23       firstByte: undefined,
+Feb 22 07:22:23       download: undefined,
+Feb 22 07:22:23       total: 129804
+Feb 22 07:22:23     }
+Feb 22 07:22:23   }
+Feb 22 07:22:23 }
+Feb 22 07:22:23 jd_wPcJDZeiQcAi去参加第一个cookie账号开的团
+Feb 22 07:22:24 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949744,"ret":10001}
+Feb 22 07:22:25 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949744,"ret":10001}
+Feb 22 07:22:25 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949745,"ret":10001}
+Feb 22 07:22:26 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949746,"ret":10001}
+Feb 22 07:22:26 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949746,"ret":10001}
+Feb 22 07:22:27 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949747,"ret":10001}
+Feb 22 07:22:28 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949748,"ret":10001}
+Feb 22 07:22:28 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949748,"ret":10001}
+Feb 22 07:22:29 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949749,"ret":10001}
+Feb 22 07:22:29 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949749,"ret":10001}
+Feb 22 07:22:30 参团失败：{"msg":"登录京东账号才可以继续游戏哦~","nowTime":1613949750,"ret":10001}
+Feb 22 07:22:33 
+Feb 22 07:22:33 🔔京喜工厂, 结束! 🕛 151.039 秒
+Feb 22 07:22:33 
