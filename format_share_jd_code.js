@@ -802,7 +802,7 @@ function getJxNc() {
                   active: data.active,
                   joinnum:data.joinnum
                 }
-                jdnc.push(rst)
+                jdnc.push(JSON.stringify(rst))
 
               } else {
                 console.log(
@@ -1661,19 +1661,21 @@ function formatForJDFreeFuck(
   const nameArr = []
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i]
-    console.log(`${itemName}${i + 1}="${item}"`)
+    console.log(`${itemName}${i + 1}='${item}'`)
     const name = '${' + itemName + (i + 1) + '}'
     nameArr.push(name)
   }
 
-  for (let m = 0; m < nameArr.length; m++) {
-    const item = nameArr[m]
-
-    console.log(
-      `${forOtherName}${m + 1}="${nameArr
-        .filter(cell => cell !== item)
-        .join('@')}"`
-    )
+  // 以 种豆得豆 个数 为准 循环 生成 other互助  补齐 没有 互助码的号 的互助 名额
+  for (let m = 0; m < submit_bean_code.length; m++) {
+    // for (let m = 0; m < nameArr.length; m++) {
+    // const item = nameArr[m]
+    // console.log(
+    //   `${forOtherName}${m + 1}='${nameArr
+    //     .filter(cell => cell !== item)
+    //     .join('@')}'`
+    // )
+    console.log(`${forOtherName}${m + 1}='${nameArr.join('@')}'`)
   }
 }
 
