@@ -240,3 +240,72 @@ Feb 22 08:02:24
 Feb 22 08:02:24 
 Feb 22 08:02:24 🔔京东摇钱树, 结束! 🕛 140.617 秒
 Feb 22 08:02:24 
+Feb 22 10:00:05 
+Feb 22 10:00:05 🔔京东摇钱树, 开始!
+Feb 22 10:00:06 
+Feb 22 10:00:06 ====================共有1个京东账号Cookie=========
+Feb 22 10:00:06 
+Feb 22 10:00:06 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 10:00:06 AM=====================
+Feb 22 10:00:06 
+Feb 22 10:00:17 
+Feb 22 10:00:17 开始【京东账号1】jd_wPcJDZeiQcAi
+Feb 22 10:00:17 
+Feb 22 10:00:17 
+Feb 22 10:00:17 ==============📣系统通知📣==============
+Feb 22 10:00:17 京东摇钱树
+Feb 22 10:00:17 【提示】cookie已失效
+Feb 22 10:00:17 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 10:00:17 请重新登录获取
+Feb 22 10:00:17 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 10:00:17 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 10:00:17 
+Feb 22 10:00:24 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 10:00:24 
+Feb 22 10:00:24 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 10:00:24 
+Feb 22 10:00:24 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 10:00:24 
+Feb 22 10:00:25 token is not exist
+Feb 22 10:00:25 
+Feb 22 10:00:25 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 10:00:25 
+Feb 22 10:02:34 telegram发送通知消息失败！！
+Feb 22 10:02:34 
+Feb 22 10:02:34 RequestError: connect ETIMEDOUT 149.154.167.220:443
+Feb 22 10:02:34     at ClientRequest.<anonymous> (/scripts/node_modules/got/dist/source/core/index.js:953:111)
+Feb 22 10:02:34     at Object.onceWrapper (events.js:421:26)
+Feb 22 10:02:34     at ClientRequest.emit (events.js:326:22)
+Feb 22 10:02:34     at ClientRequest.origin.emit (/scripts/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+Feb 22 10:02:34     at TLSSocket.socketErrorListener (_http_client.js:427:9)
+Feb 22 10:02:34     at TLSSocket.emit (events.js:314:20)
+Feb 22 10:02:34     at emitErrorNT (internal/streams/destroy.js:92:8)
+Feb 22 10:02:34     at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+Feb 22 10:02:34     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Feb 22 10:02:34     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+Feb 22 10:02:34   code: 'ETIMEDOUT',
+Feb 22 10:02:34   timings: {
+Feb 22 10:02:34     start: 1613959224727,
+Feb 22 10:02:34     socket: 1613959224728,
+Feb 22 10:02:34     lookup: 1613959224729,
+Feb 22 10:02:34     connect: undefined,
+Feb 22 10:02:34     secureConnect: undefined,
+Feb 22 10:02:34     upload: undefined,
+Feb 22 10:02:34     response: undefined,
+Feb 22 10:02:34     end: undefined,
+Feb 22 10:02:34     error: 1613959354868,
+Feb 22 10:02:34     abort: undefined,
+Feb 22 10:02:34     phases: {
+Feb 22 10:02:34       wait: 1,
+Feb 22 10:02:34       dns: 1,
+Feb 22 10:02:34       tcp: undefined,
+Feb 22 10:02:34       tls: undefined,
+Feb 22 10:02:34       request: undefined,
+Feb 22 10:02:34       firstByte: undefined,
+Feb 22 10:02:34       download: undefined,
+Feb 22 10:02:34       total: 130141
+Feb 22 10:02:34     }
+Feb 22 10:02:34   }
+Feb 22 10:02:34 }
+Feb 22 10:02:34 
+Feb 22 10:02:34 🔔京东摇钱树, 结束! 🕛 149.612 秒
+Feb 22 10:02:34 
