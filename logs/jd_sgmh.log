@@ -1,0 +1,45 @@
+Feb 22 08:27:02 
+Feb 22 08:27:02 🔔闪购盲盒, 开始!
+Feb 22 08:27:02 
+Feb 22 08:27:02 ====================共有1个京东账号Cookie=========
+Feb 22 08:27:02 
+Feb 22 08:27:02 ==================脚本执行- 北京时间(UTC+8)：2/22/2021, 8:27:02 AM=====================
+Feb 22 08:27:02 
+Feb 22 08:27:02 开始获取闪购盲盒配置文件
+Feb 22 08:27:02 
+Feb 22 08:27:02 共1个京东账号
+Feb 22 08:27:02 
+Feb 22 08:27:02 您提供了0个账号的闪购盲盒助力码
+Feb 22 08:27:02 
+Feb 22 08:27:04 由于您第1个京东账号未提供shareCode,将采纳本脚本自带的助力码
+Feb 22 08:27:04 
+Feb 22 08:27:04 开始
+Feb 22 08:27:05 随机取20个码放到您固定的互助码后面(不影响已有固定互助)
+Feb 22 08:27:05 第1个京东账号将要助力的好友["T019-aknAFRllhyoQlyI46gCjVWmIaW5kRrbA","T027Zm_olqSxIOtH97BATGmKoWraLawCjVWmIaW5kRrbA","T0205KkcJm9RkSqtcWOF3aJSCjVWmIaW5kRrbA","T008a3HAlrmmCjVWmIaW5kRrbA","T0225KkcREpIo1OCJU7wnf9cfACjVWmIaW5kRrbA","T0144qI1FUJGqwOCYgCjVWmIaW5kRrbA","T018v_5yRR8Z9VbRIRqb1ACjVWmIaW5kRrbA","T018v_V2QBwY91TQKRyb1ACjVWmIaW5kRrbA","28xIs4YwE5Z7DgIPg8fCSmFNENim-unfIFRngEQ13s","T0104qI1FUlDrgCjVWmIaW5kRrbA","T0225KkcRRtPo1DXKRmhxvIPIgCjVWmIaW5kRrbA","T012vfl2SB4R81LRCjVWmIaW5kRrbA","T0225KkcRRgZ8QLXIE7zwf8DcwCjVWmIaW5kRrbA","T0225KkcRhga8gfRKRunxvJccQCjVWmIaW5kRrbA","T0225KkcRBxPoF2CJhnwwfNZIgCjVWmIaW5kRrbA","T018v_V0RRYa81XTJR-b1ACjVWmIaW5kRrbA","T0225KkcRUob_VyBdB7zwPEJcQCjVWmIaW5kRrbA","T0225KkcREsQ_VGGJk6glqNccQCjVWmIaW5kRrbA","T0205KkcPWtKhD2OZ2Or07R0CjVWmIaW5kRrbA","T012a2Dalp2ULf1pCjVWmIaW5kRrbA","T0225KkcRRoQpgWCIE6lwPcLIQCjVWmIaW5kRrbA","T023_fx0Rhwd91LXIB_9lvUIcAsCjVWmIaW5kRrbA"]
+Feb 22 08:27:05 
+Feb 22 08:27:05 ******开始【京东账号1】jd_wPcJDZeiQcAi*********
+Feb 22 08:27:05 
+Feb 22 08:27:05 
+Feb 22 08:27:05 ==============📣系统通知📣==============
+Feb 22 08:27:05 闪购盲盒
+Feb 22 08:27:05 【提示】cookie已失效
+Feb 22 08:27:05 京东账号1 jd_wPcJDZeiQcAi
+Feb 22 08:27:05 请重新登录获取
+Feb 22 08:27:05 https://bean.m.jd.com/bean/signIndex.action
+Feb 22 08:27:05 您未提供push+推送所需的PUSH_PLUS_TOKEN，取消push+推送消息通知
+Feb 22 08:27:05 
+Feb 22 08:27:07 您未提供企业微信机器人推送所需的QYWX_KEY，取消企业微信推送消息通知
+Feb 22 08:27:07 
+Feb 22 08:27:07 您未提供企业微信应用消息推送所需的QYWX_AM，取消企业微信应用消息推送消息通知
+Feb 22 08:27:07 
+Feb 22 08:27:07 您未提供iGot的推送IGOT_PUSH_KEY，取消iGot推送消息通知
+Feb 22 08:27:07 
+Feb 22 08:27:08 token is not exist
+Feb 22 08:27:08 
+Feb 22 08:27:08 Telegram发送通知消息完成。
+Feb 22 08:27:08 
+Feb 22 08:27:08 找不到 Key 对应的 DeviceToken, 请确保 Key 正确! Key 可在 App 端注册获得。
+Feb 22 08:27:08 
+Feb 22 08:27:08 
+Feb 22 08:27:08 🔔闪购盲盒, 结束! 🕛 6.153 秒
+Feb 22 08:27:08 
