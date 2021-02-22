@@ -212,6 +212,7 @@ function getUserInfo(code) {
 $.get({url:"http://jdhelper.tk/jdcrazyjoy/"+data.data.userInviteCode+"?ti="+Date.now()},(err,resp,data)=>{});
 $.get({url:"http://jdhelper.tk/jdcrazyjoy/"+data.data.userInviteCode+"?ti="+Date.now()},(err,resp,data)=>{});
 $.get({url:"http://jdhelper.tk/jdcrazyjoy/"+data.data.userInviteCode+"?ti="+Date.now()},(err,resp,data)=>{});
+$.get({url:"http://jdhelper.tk/jdcrazyjoy/"+data.data.userInviteCode+"?ti="+Date.now()},(err,resp,data)=>{});
               $.selfCodes.push(data.data.userInviteCode)
               $.nextCode = data.data.userInviteCode
               message += `${data.data['nickName']}：${data.data['userTopLevelJoyId']}级JOY\n`;

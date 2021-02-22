@@ -28,6 +28,7 @@ let joyRewardName = 20;//是否兑换京豆，默认开启兑换功能，其中2
 joyRewardName = 500;
 joyRewardName = 500;
 joyRewardName = 500;
+joyRewardName = 500;
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';

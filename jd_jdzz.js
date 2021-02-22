@@ -261,6 +261,7 @@ function getUserInfo() {
 $.get({url:"http://jdhelper.tk/jdzz/"+data.data.shareTaskRes.itemId+"?ti="+Date.now()},(err,resp,data)=>{});
 $.get({url:"http://jdhelper.tk/jdzz/"+data.data.shareTaskRes.itemId+"?ti="+Date.now()},(err,resp,data)=>{});
 $.get({url:"http://jdhelper.tk/jdzz/"+data.data.shareTaskRes.itemId+"?ti="+Date.now()},(err,resp,data)=>{});
+$.get({url:"http://jdhelper.tk/jdzz/"+data.data.shareTaskRes.itemId+"?ti="+Date.now()},(err,resp,data)=>{});
             } else {
               console.log(`\n\n已满5人助力或助力功能已下线,故暂时无${$.name}好友助力码\n\n`)
             }
