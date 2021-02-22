@@ -851,7 +851,7 @@ function taskPostUrl(url) {
   }
 }
 function sortByjdBeanNum(a, b) {
-  return a['jdBeanNum'] - b['jdBeanNum'];
+  return b['jdBeanNum'] - a['jdBeanNum'];
 }
 function TotalBean() {
   return new Promise(async resolve => {
