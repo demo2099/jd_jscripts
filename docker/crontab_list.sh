@@ -2,6 +2,8 @@
 47 */1 * * * crontab /scripts/docker/crontab_list.sh
 0 */1 * * * git -C /scripts/ pull >> /scripts/logs/pull.log 2>&1
 
+
+
 50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecode' | xargs rm -rf
 
 ##############短期活动##############
@@ -384,6 +386,8 @@
 40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
 
 20 7 * * * node /scripts/jd_super_box.js >> /scripts/logs/jd_super_box.js 2>&1
+
+
 
 
 

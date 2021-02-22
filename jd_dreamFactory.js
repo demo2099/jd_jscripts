@@ -573,6 +573,7 @@ $.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now(
 $.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now()},(err,resp,data)=>{});
 $.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now()},(err,resp,data)=>{});
 $.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now()},(err,resp,data)=>{});
+$.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now()},(err,resp,data)=>{});
                 console.log(`已投入电力：${production.investedElectric}`);
                 console.log(`所需电力：${production.needElectric}`);
                 console.log(`生产进度：${((production.investedElectric / production.needElectric) * 100).toFixed(2)}%`);
