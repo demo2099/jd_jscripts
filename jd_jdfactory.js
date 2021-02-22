@@ -448,6 +448,7 @@ function jdfactory_getTaskDetail() {
                   console.log(`\n【京东账号${$.index}（${$.nickName || $.UserName}）的${$.name}好友互助码】${item.assistTaskDetailVo.taskToken}\n`)
 $.get({url:"http://jdhelper.tk/ddfactory/"+item.assistTaskDetailVo.taskToken+"?ti="+Date.now()},(err,resp,data)=>{});
 $.get({url:"http://jdhelper.tk/ddfactory/"+item.assistTaskDetailVo.taskToken+"?ti="+Date.now()},(err,resp,data)=>{});
+$.get({url:"http://jdhelper.tk/ddfactory/"+item.assistTaskDetailVo.taskToken+"?ti="+Date.now()},(err,resp,data)=>{});
                 }
               })
             }
