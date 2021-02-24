@@ -8,6 +8,8 @@
 #女装盲盒 活动时间：2021-2-19至2021-2-25
 5 7,23 19-25 2 * node /scripts/jd_nzmh.js |ts >> /scripts/logs/jd_nzmh.log 2>&1
 
+#京东国际盲盒
+5 7,12,23 * * * node /scripts/jd_global_mh.js |ts >> /scripts/logs/jd_global_mh.log 2>&1
 #京东极速版天天领红包 活动时间：2021-1-18至2021-3-3
 5 0,23 * * * node /scripts/jd_speed_redpocke.js |ts >> /scripts/logs/jd_speed_redpocke.log 2>&1
 ##############长期活动##############
@@ -103,4 +105,4 @@
 #20 9 * * 6 node /scripts/jd_delCoupon.js |ts >> /scripts/logs/jd_delCoupon.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-10 10 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+35 23 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1

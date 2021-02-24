@@ -1,6 +1,6 @@
 /*
 京东国际盲盒
-活动时间:2021-01-15至2021-02-15
+活动时间:2021-02-23至2021-03-31
 暂不加入品牌会员
 地址 https://gmart.jd.com/?appId=27260146
 活动入口：京东app首页浮动窗口
@@ -38,13 +38,7 @@ if ($.isNode()) {
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {
   };
 } else {
-  let cookiesData = $.getdata('CookiesJD') || "[]";
-  cookiesData = jsonParse(cookiesData);
-  cookiesArr = cookiesData.map(item => item.cookie);
-  cookiesArr.reverse();
-  cookiesArr.push(...[$.getdata('CookieJD2'), $.getdata('CookieJD')]);
-  cookiesArr.reverse();
-  cookiesArr = cookiesArr.filter(item => item !== "" && item !== null && item !== undefined);
+  cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 
 const JD_API_HOST = 'https://api.m.jd.com/', actCode = 'lucky-box-001';
