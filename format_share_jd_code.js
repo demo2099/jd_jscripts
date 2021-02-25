@@ -1,12 +1,10 @@
 /*
-现在只能获取手动提交 机器人
-基于 lxk0301 大佬的版本基础上做了格式划打印调整
-
-已支持IOS双京东账号, Node.js支持N个京东账号
+docker 下获取所有账号的互助码，自动更新配置文件  及 格式话
+基于 lxk0301 大佬的版本基础上做了改进
 
 2.25 新增 支持 node 环境 同步本地 互助码 到 配置文件
 使用说明：你需要 在 node 版本中 打开 网页控制台 -首页 - 在线编辑工具中 找到 填写互助码部分 
-在最前面和最后面 各 添加一行 # format_share_jd_code
+在互助码最前面和最后面 各 添加一行 # format_share_jd_code
 例：
 # format_share_jd_code
 ################################## 定义东东农场互助（选填） ##################################
@@ -14,27 +12,40 @@ xxxx
 xxx
 # format_share_jd_code
 
+diy配置更新(推荐)
+  把 脚本 配置进去。。。看 diy.sh 说明 配置好
+  bash git_pull
+  bash jd qq34347476_format_share_jd_code now
+手动更新：
+  docker exec -it jd /bin/bash
+  cd script
+  wget https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js
+  cd ..
+  bash jd format_share_jd_code.js now
+
 ################################## 定义东东超市蓝币兑换数量（选填） ##################################
 
 注意位置脚本会 替换 两个 # format_share_jd_code 中间部分所有内容
 
+已支持IOS双京东账号, Node.js支持N个京东账号
+
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
-#获取互助码
-0 1 * * * https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取并提交助力码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
+#获取互助码并格式化/docker自动更新容器下所有账号互助码
+0 1 * * * https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取互助码并格式化/docker自动更新容器下所有账号互助码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 1 0/2 * *" script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取并提交助力码
+cron "0 1 0/2 * *" script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取互助码并格式化/docker自动更新容器下所有账号互助码
 
 ===============Surge=================
-获取并提交助力码 = type=cron,cronexp="0 1 * * *",wake-system=1,timeout=120,script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js
+获取互助码并格式化/docker自动更新容器下所有账号互助码 = type=cron,cronexp="0 1 * * *",wake-system=1,timeout=120,script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js
 
 ============小火箭=========
-获取并提交助力码 = type=cron,script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/get_share_jd_code.js, cronexpr="0 35 2 1,10,20 * ?", timeout=200, enable=true
+获取互助码并格式化/docker自动更新容器下所有账号互助码 = type=cron,script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/get_share_jd_code.js, cronexpr="0 35 2 1,10,20 * ?", timeout=200, enable=true
  */
-const $ = new Env('获取并格式化助力码 for Linux')
+const $ = new Env('获取互助码并格式化/docker自动更新容器下所有账号互助码')
 const JD_API_HOST = 'https://api.m.jd.com/client.action'
 let cookiesArr = [],
   cookie = '',
