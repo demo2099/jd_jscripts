@@ -23,6 +23,8 @@
 5 6-18/6 * * * node /scripts/jd_fruit.js |ts >> /scripts/logs/jd_fruit.log 2>&1
 # 宠汪汪
 15 */2 * * * node /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
+# 宠汪汪积分兑换京豆
+0 0-16/8 * * * node /scripts/jd_joy_reward.js |ts >> /scripts/logs/jd_joy_reward.log 2>&1
 # 宠汪汪喂食
 15 */1 * * * node /scripts/jd_joy_feedPets.js |ts >> /scripts/logs/jd_joy_feedPets.log 2>&1
 # 宠汪汪偷好友积分与狗粮
@@ -105,4 +107,4 @@
 #20 9 * * 6 node /scripts/jd_delCoupon.js |ts >> /scripts/logs/jd_delCoupon.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-35 23 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+14 7 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
