@@ -1,8 +1,23 @@
 /*
-现在只能获取手动提交
+现在只能获取手动提交 机器人
 基于 lxk0301 大佬的版本基础上做了格式划打印调整
 
 已支持IOS双京东账号, Node.js支持N个京东账号
+
+2.25 新增 支持 node 环境 同步本地 互助码 到 配置文件
+使用说明：你需要 在 node 版本中 打开 网页控制台 -首页 - 在线编辑工具中 找到 填写互助码部分 
+在最前面和最后面 各 添加一行 # format_share_jd_code
+例：
+# format_share_jd_code
+################################## 定义东东农场互助（选填） ##################################
+xxxx
+xxx
+# format_share_jd_code
+
+################################## 定义东东超市蓝币兑换数量（选填） ##################################
+
+注意位置脚本会 替换 两个 # format_share_jd_code 中间部分所有内容
+
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
@@ -626,6 +641,9 @@ if ($.isNode()) {
     }
   }
   showFormatMsg()
+  if ($.isNode()) {
+    exportLog()
+  }
 })()
   .catch(e => {
     $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
@@ -800,10 +818,9 @@ function getJxNc() {
                 const rst = {
                   smp: data.smp,
                   active: data.active,
-                  joinnum:data.joinnum
+                  joinnum: data.joinnum,
                 }
                 jdnc.push(JSON.stringify(rst))
-
               } else {
                 console.log(
                   `【账号${$.index}（${
@@ -1633,6 +1650,7 @@ async function getSgmh(timeout = 0) {
   })
 }
 
+let exportStr = ''
 // @Turing Lab Bot
 let submit_bean_code = [] // 种豆得豆
 let submit_farm_code = [] // 东东农场互助码
@@ -1658,11 +1676,14 @@ function formatForJDFreeFuck(
   forOtherName = '',
   marks = '"'
 ) {
+  exportStr += `# ${name}\r\n`
   console.log(`# ${name}`)
   const nameArr = []
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i]
-    console.log(`${itemName}${i + 1}=${marks}${item}${marks}`)
+    const log = `${itemName}${i + 1}=${marks}${item}${marks}`
+    exportStr += `${log}\r\n`
+    console.log(log)
     const name = '${' + itemName + (i + 1) + '}'
     nameArr.push(name)
   }
@@ -1676,7 +1697,9 @@ function formatForJDFreeFuck(
     //     .filter(cell => cell !== item)
     //     .join('@')}'`
     // )
-    console.log(`${forOtherName}${m + 1}="${nameArr.join('@')}"`)
+    const log = `${forOtherName}${m + 1}="${nameArr.join('@')}"`
+    exportStr += `${log}\r\n`
+    console.log(log)
   }
 }
 
@@ -1762,6 +1785,36 @@ function showFormatMsg() {
   formatForJDFreeFuck(jdcash, '签到领现金', 'MyCash', 'ForOtherCash')
   formatForJDFreeFuck(jdcrazyjoy, 'crazy joy', 'MyJoy', 'ForOtherJoy')
   formatForJDFreeFuck(jdSgmh, '闪购盲盒', 'MySgmh', 'ForOtherSgmh')
+}
+
+const exportLog = () => {
+  const fs = require('fs')
+  const path = require('path')
+  let file = path.resolve(__dirname, '../config/config.sh')
+
+  fs.readFile(file, 'utf-8', function (err, data) {
+    if (err) {
+      console.error(err)
+    } else {
+      console.log('读取文件成功')
+      let dataArr = data.split('# format_share_jd_code')
+      if (dataArr.length > 1) {
+        dataArr.splice(1, 1, exportStr)
+        exportStr = dataArr.join('# format_share_jd_code\r\n')
+
+        fs.writeFile(file, exportStr, { encoding: 'utf8' }, err => {
+          if (err) {
+            console.log(err)
+          } else {
+            console.log('更新互助码成功文件成功')
+          }
+        })
+      } else {
+        console.log('源文件配置不正确,更新互助码失败')
+        console.log('请参考 https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js 使用说明 食用')
+      }
+    }
+  })
 }
 
 async function getShareCodeAndAdd() {
