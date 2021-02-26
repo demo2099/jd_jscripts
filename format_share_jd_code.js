@@ -1687,13 +1687,13 @@ function formatForJDFreeFuck(
   forOtherName = '',
   marks = '"'
 ) {
-  exportStr += `# ${name}\r\n`
+  exportStr += `# ${name}\n`
   console.log(`# ${name}`)
   const nameArr = []
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i]
     const log = `${itemName}${i + 1}=${marks}${item}${marks}`
-    exportStr += `${log}\r\n`
+    exportStr += `${log}\n`
     console.log(log)
     const name = '${' + itemName + (i + 1) + '}'
     nameArr.push(name)
@@ -1709,13 +1709,13 @@ function formatForJDFreeFuck(
     //     .join('@')}'`
     // )
     const log = `${forOtherName}${m + 1}="${nameArr.join('@')}"`
-    exportStr += `${log}\r\n`
+    exportStr += `${log}\n`
     console.log(log)
   }
 }
 
 function getRandomArrayElements(arr, count = 4) {
-  if (arr.length === 0) {
+  if (arr.length < 5) {
     return arr
   } else {
     let shuffled = arr.slice(0),
