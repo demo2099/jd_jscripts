@@ -1715,7 +1715,7 @@ function formatForJDFreeFuck(
 }
 
 function getRandomArrayElements(arr, count = 4) {
-  if (arr.length < 5) {
+  if (arr.length <= 5) {
     return arr
   } else {
     let shuffled = arr.slice(0),
