@@ -1,6 +1,6 @@
 /**
 宠汪汪邀请助力与赛跑助力脚本，感谢github@Zero-S1提供帮助
-更新时间：2021-1-7（宠汪汪助力更新Token的配置正则表达式已改）
+更新时间：2021-2-26
 活动入口：京东APP我的-更多工具-宠汪汪
 token时效很短，几个小时就失效了,闲麻烦的放弃就行
 每天拿到token后，可一次性运行完毕即可。
@@ -44,9 +44,20 @@ http-request ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detai
 const isRequest = typeof $request != "undefined"
 const $ = new Env('宠汪汪赛跑');
 const JD_BASE_API = `https://draw.jdfcloud.com//pet`;
-//此处填入你需要助力好友的京东用户名
 //下面给出好友邀请助力的示例填写规则
-var _0xod3='jsjiami.com.v6',_0x4ba3=[_0xod3,'FMObc8KWRw==','W23DnRrDhcOH','DsOFe8KaSxoO','wolOw7gAwp3Dkw==','G8OTwrXCuMOGw4DDgw==','wqrDnsONeHwWw5jDsV3Dr2A9woLCu8Olw6E=','6KK75ouX5Y6r55qu6K+j5b6Ow4EO','bD17woTCnQwbwofCmzXCpyLDncOWRsKT','bD17wofCmFlMw5fDiznDtyPCh8KGRcOH','wrsXwrvDpAfDhU0H','wqZtw5AMw5fDrsK8w5EGwrLDvzPDnU3DrsOQ','6KOq5omY5Y6B55iY6K+h5b+fw57DusOLwrzCmhpkwprCl8OpwpASOmnCsMKnwqBEVG3DlUk6EsKoAU8Sw6ZqWQEEfgQwRMOKEXzDvQzCn8KsL8O5w6HCqXV+JsO2w5tpGcOYKDRuw6fDpW7Cu2REYkjDkmdnI8OvwrnDicKUL8K2RcONQMKRwpPCsMK3woHCtBrDnzsLdx7DqitvwqsORMKIw4dMwrbDj8Ovw6nDg8K2w6M5wqB9A09aB8KWP0ZSwrbCrsK0w7d6fgPDtS7CmnTCgQwow7FpwojDpXtkR8KUwqbDvcKSw6XDp8Kxwq0tC8KtdiTDoGUsBV0RwofDrsOZMyjDssOOYR9Gwp4nDsOYfwhiJw==','HjsjENhWSidaAmHxlli.com.v6=='];(function(_0x2d8f05,_0x4b81bb,_0x4d74cb){var _0x32719f=function(_0x2dc776,_0x362d54,_0x2576f4,_0x5845c1,_0x4fbc7a){_0x362d54=_0x362d54>>0x8,_0x4fbc7a='po';var _0x292610='shift',_0x151bd2='push';if(_0x362d54<_0x2dc776){while(--_0x2dc776){_0x5845c1=_0x2d8f05[_0x292610]();if(_0x362d54===_0x2dc776){_0x362d54=_0x5845c1;_0x2576f4=_0x2d8f05[_0x4fbc7a+'p']();}else if(_0x362d54&&_0x2576f4['replace'](/[HENhWSdAHxll=]/g,'')===_0x362d54){_0x2d8f05[_0x151bd2](_0x5845c1);}}_0x2d8f05[_0x151bd2](_0x2d8f05[_0x292610]());}return 0x73f5d;};return _0x32719f(++_0x4b81bb,_0x4d74cb)>>_0x4b81bb^_0x4d74cb;}(_0x4ba3,0x14f,0x14f00));var _0x51f5=function(_0x542044,_0x17cf38){_0x542044=~~'0x'['concat'](_0x542044);var _0x112687=_0x4ba3[_0x542044];if(_0x51f5['bSwgUi']===undefined){(function(){var _0xab313c=typeof window!=='undefined'?window:typeof process==='object'&&typeof require==='function'&&typeof global==='object'?global:this;var _0x4e6f6d='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0xab313c['atob']||(_0xab313c['atob']=function(_0x5f39d6){var _0x208cb4=String(_0x5f39d6)['replace'](/=+$/,'');for(var _0x3d6b71=0x0,_0xe5dc75,_0x3df178,_0x4fddde=0x0,_0x35f558='';_0x3df178=_0x208cb4['charAt'](_0x4fddde++);~_0x3df178&&(_0xe5dc75=_0x3d6b71%0x4?_0xe5dc75*0x40+_0x3df178:_0x3df178,_0x3d6b71++%0x4)?_0x35f558+=String['fromCharCode'](0xff&_0xe5dc75>>(-0x2*_0x3d6b71&0x6)):0x0){_0x3df178=_0x4e6f6d['indexOf'](_0x3df178);}return _0x35f558;});}());var _0x231047=function(_0x45dc9c,_0x17cf38){var _0x537b35=[],_0x277672=0x0,_0x3f8468,_0x1c92dc='',_0x17ca2c='';_0x45dc9c=atob(_0x45dc9c);for(var _0x962db4=0x0,_0x42829e=_0x45dc9c['length'];_0x962db4<_0x42829e;_0x962db4++){_0x17ca2c+='%'+('00'+_0x45dc9c['charCodeAt'](_0x962db4)['toString'](0x10))['slice'](-0x2);}_0x45dc9c=decodeURIComponent(_0x17ca2c);for(var _0x411a1b=0x0;_0x411a1b<0x100;_0x411a1b++){_0x537b35[_0x411a1b]=_0x411a1b;}for(_0x411a1b=0x0;_0x411a1b<0x100;_0x411a1b++){_0x277672=(_0x277672+_0x537b35[_0x411a1b]+_0x17cf38['charCodeAt'](_0x411a1b%_0x17cf38['length']))%0x100;_0x3f8468=_0x537b35[_0x411a1b];_0x537b35[_0x411a1b]=_0x537b35[_0x277672];_0x537b35[_0x277672]=_0x3f8468;}_0x411a1b=0x0;_0x277672=0x0;for(var _0x452d95=0x0;_0x452d95<_0x45dc9c['length'];_0x452d95++){_0x411a1b=(_0x411a1b+0x1)%0x100;_0x277672=(_0x277672+_0x537b35[_0x411a1b])%0x100;_0x3f8468=_0x537b35[_0x411a1b];_0x537b35[_0x411a1b]=_0x537b35[_0x277672];_0x537b35[_0x277672]=_0x3f8468;_0x1c92dc+=String['fromCharCode'](_0x45dc9c['charCodeAt'](_0x452d95)^_0x537b35[(_0x537b35[_0x411a1b]+_0x537b35[_0x277672])%0x100]);}return _0x1c92dc;};_0x51f5['uERWbC']=_0x231047;_0x51f5['wXWxPt']={};_0x51f5['bSwgUi']=!![];}var _0x406e23=_0x51f5['wXWxPt'][_0x542044];if(_0x406e23===undefined){if(_0x51f5['ySEjIN']===undefined){_0x51f5['ySEjIN']=!![];}_0x112687=_0x51f5['uERWbC'](_0x112687,_0x17cf38);_0x51f5['wXWxPt'][_0x542044]=_0x112687;}else{_0x112687=_0x406e23;}return _0x112687;};let invite_pins=['jd_6cd93e613b0e5,被折叠的记忆33,jd_704a2e5e28a66,jd_45a6b5953b15b,zooooo58,jd_66f5cecc1efcd,jd_41345a6f96aa5,jd_sIhNpDXJehOr,jd_mCbhXxmqzYJC,wddpzLSxORvLGo,jd_7bb2be8dbd65c'];let run_pins=[_0x51f5('0','H1$v')];let temp=run_pins[0x0][_0x51f5('1','EsGC')](',');let fixPins=temp[_0x51f5('2','r*yV')](temp[_0x51f5('3','EsGC')]('jd_6cd93e613b0e5'),0x1);fixPins['push'](...temp[_0x51f5('4','8b]e')](temp[_0x51f5('5','EGiV')]('被折叠的记忆33'),0x1));const randomPins=getRandomArrayElements(temp,0x4);temp=[...fixPins,...randomPins];run_pins=[temp['join'](',')];let friendsArr=[_0x51f5('6','sgc['),_0x51f5('7','Ik*@'),_0x51f5('8','5MKk'),_0x51f5('9','5MKk'),_0x51f5('a','qPzP'),_0x51f5('b','Gr78'),'jd_41345a6f96aa5'];;_0xod3='jsjiami.com.v6';
+let invite_pins = ['jd_6cd93e613b0e5,被折叠的记忆33,jd_704a2e5e28a66,jd_45a6b5953b15b,zooooo58,jd_66f5cecc1efcd,jd_41345a6f96aa5,jd_sIhNpDXJehOr,jd_mCbhXxmqzYJC,wddpzLSxORvLGo,jd_7bb2be8dbd65c'];
+//下面给出好友赛跑助力的示例填写规则
+let run_pins = ['jd_6cd93e613b0e5,被折叠的记忆33,jd_704a2e5e28a66,jd_45a6b5953b15b,zooooo58,jd_66f5cecc1efcd,jd_41345a6f96aa5,jd_sIhNpDXJehOr,jd_mCbhXxmqzYJC,wddpzLSxORvLGo,jd_7bb2be8dbd65c'];
+let temp = run_pins[0].split(',')
+let fixPins = temp.splice(temp.indexOf('jd_6cd93e613b0e5'), 1);
+fixPins.push(...temp.splice(temp.indexOf('被折叠的记忆33'), 1));
+const randomPins = getRandomArrayElements(temp, 4);
+temp = [...fixPins, ...randomPins];
+run_pins = [temp.join(',')];
+// $.LKYLToken = '76fe7794c475c18711e3b47185f114b5' || $.getdata('jdJoyRunToken');
+// $.LKYLToken = $.getdata('jdJoyRunToken');
+//friendsArr内置太多会导致IOS端部分软件重启,可PR过来(此处目的:帮别人助力可得30g狗粮)
+let friendsArr = ["jd_6cd93e613b0e5", "被折叠的记忆33", "jd_704a2e5e28a66", "jd_45a6b5953b15b", "zooooo58", "jd_66f5cecc1efcd", "jd_41345a6f96aa5"]
 // $.LKYLToken = '76fe7794c475c18711e3b47185f114b5' || $.getdata('jdJoyRunToken');
 // $.LKYLToken = $.getdata('jdJoyRunToken');
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -112,24 +123,38 @@ async function getToken() {
     const LKYLToken = body.data && body.data.token;
     if (LKYLToken) {
       $.log(`${$.name} token\n${LKYLToken}\n`);
-      count = $.getdata('countFlag') ? $.getdata('countFlag') * 1 : 0;
-      count ++;
-      console.log(`count: ${count}`)
-      $.setdata(`${count}`, 'countFlag');
-      if ($.getdata('countFlag') * 1 === 2) {
-        count = 0;
-        $.setdata(`${count}`, 'countFlag');
-        $.msg($.name, '更新Token: 成功🎉', ``);
-        console.log(`开始上传Token，${LKYLToken}\n`)
-        await $.http.get({url: `http://jd.turinglabs.net/api/v2/jd/joy/create/${LKYLToken}/`}).then((resp) => {
-          if (resp.statusCode === 200) {
+      $.msg($.name, '更新Token: 成功🎉', ``);
+      console.log(`\nToken，${LKYLToken}\n`)
+      $.http.get({url: `http://jd.turinglabs.net/api/v2/jd/joy/create/${LKYLToken}/`}).then((resp) => {
+        if (resp.statusCode === 200) {
+          try {
             let { body } = resp;
             console.log(`Token提交结果:${body}\n`)
             body = JSON.parse(body);
             console.log(`${body.message}`)
+          } catch (e) {
+            console.log(`更新Token异常:${e}`)
           }
-        });
-      }
+        }
+      });
+      // count = $.getdata('countFlag') ? $.getdata('countFlag') * 1 : 0;
+      // count ++;
+      // console.log(`count: ${count}`)
+      // $.setdata(`${count}`, 'countFlag');
+      // if ($.getdata('countFlag') * 1 === 2) {
+      //   count = 0;
+      //   $.setdata(`${count}`, 'countFlag');
+      //   $.msg($.name, '更新Token: 成功🎉', ``);
+      //   console.log(`开始上传Token，${LKYLToken}\n`)
+      //   await $.http.get({url: `http://jd.turinglabs.net/api/v2/jd/joy/create/${LKYLToken}/`}).then((resp) => {
+      //     if (resp.statusCode === 200) {
+      //       let { body } = resp;
+      //       console.log(`Token提交结果:${body}\n`)
+      //       body = JSON.parse(body);
+      //       console.log(`${body.message}`)
+      //     }
+      //   });
+      // }
       $.setdata(LKYLToken, 'jdJoyRunToken');
     }
     $.done({ body: JSON.stringify(body) })
