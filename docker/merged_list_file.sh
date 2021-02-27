@@ -107,4 +107,4 @@
 #20 9 * * 6 node /scripts/jd_delCoupon.js |ts >> /scripts/logs/jd_delCoupon.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-15 17 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+3 11 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
