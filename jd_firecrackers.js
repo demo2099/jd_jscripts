@@ -1,31 +1,26 @@
 /*
- * @Author: shylocks https://github.com/shylocks
- * @Date: 2021-01-20 13:27:41
- * @Last Modified by:   shylocks
- * @Last Modified time: 2021-01-20 21:27:41
- */
-/*
-集鞭炮赢京豆
-活动入口：京东APP首页-发现好货-悬浮窗领京豆
-地址：https://linggame.jd.com/babelDiy/Zeus/heA49fhvyw9UakaaS3UUJRL7v3o/index.html
+她的节，享京豆
+活动入口：
+活动地址：https://linggame.jd.com/babelDiy/Zeus/3Y7JfoyA2Nwoa4FRqgDY4WpVjfgP/index.html
+一天700积分，两天1400积分换35京豆，一共8天，可换140京豆，差不多一期种豆得豆
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============Quantumultx===============
 [task_local]
-#集鞭炮赢京豆
-10 8,21 * * * https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_firecrackers.js, tag=集鞭炮赢京豆, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+#她的节享京豆
+0 8,21 1-8/1 3 * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_firecrackers.js, tag=她的节享京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 8,21 * * *" script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_firecrackers.js,tag=集鞭炮赢京豆
+cron "0 8,21 1-8/1 3 *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_firecrackers.js,tag=她的节享京豆
 
 ===============Surge=================
-集鞭炮赢京豆 = type=cron,cronexp="10 8,21 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_firecrackers.js
+她的节享京豆 = type=cron,cronexp="0 8,21 1-8/1 3 *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_firecrackers.js
 
 ============小火箭=========
-集鞭炮赢京豆 = type=cron,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_firecrackers.js, cronexpr="10 8,21 * * *", timeout=3600, enable=true
+她的节享京豆 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_firecrackers.js, cronexpr="0 8,21 1-8/1 3 *", timeout=3600, enable=true
  */
-const $ = new Env('集鞭炮赢京豆');
+const $ = new Env('她的节享京豆');
 const notify = $.isNode() ? require('./sendNotify') : '';
 let notifyBean = $.isNode() ? process.env.FIRECRACKERS_NOTITY_BEAN || 0 : 0; // 账号满足兑换多少京豆时提示 默认 0 不提示，格式：120 表示能兑换 120 豆子发出通知;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -40,13 +35,7 @@ if ($.isNode()) {
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {
   };
 } else {
-  let cookiesData = $.getdata('CookiesJD') || "[]";
-  cookiesData = jsonParse(cookiesData);
-  cookiesArr = cookiesData.map(item => item.cookie);
-  cookiesArr.reverse();
-  cookiesArr.push(...[$.getdata('CookieJD2'), $.getdata('CookieJD')]);
-  cookiesArr.reverse();
-  cookiesArr = cookiesArr.filter(item => item !== "" && item !== null && item !== undefined);
+  cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 
 !(async () => {
@@ -69,8 +58,6 @@ if ($.isNode()) {
         $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
         if ($.isNode()) {
           await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
-        } else {
-          $.setdata('', `CookieJD${i ? i + 1 : ""}`);//cookie失效，故清空cookie。$.setdata('', `CookieJD${i ? i + 1 : "" }`);//cookie失效，故清空cookie。
         }
         continue
       }
@@ -120,7 +107,7 @@ function showMsg() {
 function getInfo() {
   return new Promise(resolve => {
     $.get({
-      url: 'https://linggame.jd.com/babelDiy/Zeus/heA49fhvyw9UakaaS3UUJRL7v3o/index.html',
+      url: 'https://linggame.jd.com/babelDiy/Zeus/3Y7JfoyA2Nwoa4FRqgDY4WpVjfgP/index.html',
       headers: {
         Cookie: cookie
       }
@@ -270,7 +257,11 @@ function TotalBean() {
               $.isLogin = false; //cookie过期
               return
             }
-            $.nickName = data['base'].nickname;
+            if (data['retcode'] === 0) {
+              $.nickName = data['base'].nickname;
+            } else {
+              $.nickName = $.UserName
+            }
           } else {
             console.log(`京东服务器返回空数据`)
           }
