@@ -112,4 +112,4 @@
 10-20/5 12,23 * * * node /scripts/jd_live.js |ts >> /scripts/logs/jd_live.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-27 13 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+58 5 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
