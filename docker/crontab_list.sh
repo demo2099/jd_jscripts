@@ -1,10 +1,6 @@
 # 每3天的23:50分清理一次日志(互助码不清理，proc_file.sh对该文件进行了去重)
 47 */1 * * * crontab /scripts/docker/crontab_list.sh
 0 */1 * * * git -C /scripts/ pull >> /scripts/logs/pull.log 2>&1
-
-
-
-
 50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecode' | xargs rm -rf
 
 ##############短期活动##############
@@ -120,9 +116,5 @@
 10-20/5 12,23 * * * node /scripts/jd_live.js >> /scripts/logs/jd_live.log 2>&1
 #京小兑
 23 5,23 * * * node /scripts/jd_jxd.js >> /scripts/logs/jd_jxd.log 2>&1
-
-
-
-
 
 
