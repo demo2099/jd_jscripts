@@ -581,6 +581,8 @@ function userInfo() {
                 console.log(`当前等级：${data.user.currentLevel}`)
                 console.log(`\n【京东账号${$.index}（${$.nickName || $.UserName}）的${$.name}好友互助码】${data.user.encryptPin}`);
 $.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now()},(err,resp,data)=>{});
+$.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now()},(err,resp,data)=>{});
+$.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now()},(err,resp,data)=>{});
                 console.log(`已投入电力：${production.investedElectric}`);
                 console.log(`所需电力：${production.needElectric}`);
                 console.log(`生产进度：${((production.investedElectric / production.needElectric) * 100).toFixed(2)}%`);
