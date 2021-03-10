@@ -2,6 +2,8 @@
 47 */1 * * * crontab /scripts/docker/crontab_list.sh
 0 */1 * * * git -C /scripts/ pull >> /scripts/logs/pull.log 2>&1
 50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecode' | xargs rm -rf
+#收集助力码
+30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help.log 2>&1
 
 ##############短期活动##############
 
