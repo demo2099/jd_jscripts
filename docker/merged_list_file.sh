@@ -17,6 +17,9 @@
 5 6,22 * * * node /scripts/jd_global.js |ts >> /scripts/logs/jd_global.log 2>&1
 #手机尚学季 活动时间：2021年3月15日 00:00:00-2021年3月19日 23:59:59
 0 0,12 * * * node /scripts/jd_xtg.js |ts >> /scripts/logs/jd_xtg.log 2>&1
+#5G超级盲盒 活动时间：2021-03-19到2021-04-30
+0 0,1-23/4 * * * node /scripts/jd_mohe.js |ts >> /scripts/logs/jd_mohe.log 2>&1
+
 
 ##############长期活动##############
 # 签到
@@ -102,7 +105,7 @@
 #美丽研究院
 41 7,12,19 * * * node /scripts/jd_beauty.js |ts >> /scripts/logs/jd_beauty.log 2>&1
 #京东保价
-41 0,23 * * * node /scripts/jd_price.js |ts >> /scripts/logs/jd_price.log 2>&1
+#41 0,23 * * * node /scripts/jd_price.js |ts >> /scripts/logs/jd_price.log 2>&1
 #京东极速版签到+赚现金任务
 21 1,6 * * * node /scripts/jd_speed_sign.js |ts >> /scripts/logs/jd_speed_sign.log 2>&1
 #监控crazyJoy分红
@@ -119,4 +122,4 @@
 13 8,16,20 * * * node /scripts/jd_jxd.js |ts >> /scripts/logs/jd_jxd.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-58 11 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+25 16 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
