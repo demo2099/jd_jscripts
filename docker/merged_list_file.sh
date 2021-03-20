@@ -17,9 +17,9 @@
 5 6,22 * * * node /scripts/jd_global.js |ts >> /scripts/logs/jd_global.log 2>&1
 
 #5G超级盲盒 活动时间：2021-03-19到2021-04-30
-0 0,1-23/4 * * * node /scripts/jd_mohe.js |ts >> /scripts/logs/jd_mohe.log 2>&1
+10 0,1-23/4 * * * node /scripts/jd_mohe.js |ts >> /scripts/logs/jd_mohe.log 2>&1
 
-0 0-23/1 * * * node /scripts/jd_city.js |ts >> /scripts/logs/jd_city.log 2>&1
+40 0-23/1 * * * node /scripts/jd_city.js |ts >> /scripts/logs/jd_city.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js |ts >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -119,4 +119,4 @@
 13 8,16,20 * * * node /scripts/jd_jxd.js |ts >> /scripts/logs/jd_jxd.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-8 7 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+47 17 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
