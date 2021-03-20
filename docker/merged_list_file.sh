@@ -15,12 +15,11 @@
 35 7,12,23 * * * node /scripts/jd_global_mh.js |ts >> /scripts/logs/jd_global_mh.log 2>&1
 #环球挑战赛 第二季(活动时间：2021-03-08 至 2021-03-31)
 5 6,22 * * * node /scripts/jd_global.js |ts >> /scripts/logs/jd_global.log 2>&1
-#手机尚学季 活动时间：2021年3月15日 00:00:00-2021年3月19日 23:59:59
-0 0,12 * * * node /scripts/jd_xtg.js |ts >> /scripts/logs/jd_xtg.log 2>&1
+
 #5G超级盲盒 活动时间：2021-03-19到2021-04-30
 0 0,1-23/4 * * * node /scripts/jd_mohe.js |ts >> /scripts/logs/jd_mohe.log 2>&1
 
-
+0 0-23/1 * * * node /scripts/jd_city.js |ts >> /scripts/logs/jd_city.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js |ts >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -36,8 +35,6 @@
 0 0-16/8 * * * node /scripts/jd_joy_reward.js |ts >> /scripts/logs/jd_joy_reward.log 2>&1
 # 宠汪汪喂食
 35 */1 * * * node /scripts/jd_joy_feedPets.js |ts >> /scripts/logs/jd_joy_feedPets.log 2>&1
-# 宠汪汪偷好友积分与狗粮
-33 0-21/3 * * * node /scripts/jd_joy_steal.js |ts >> /scripts/logs/jd_joy_steal.log 2>&1
 # 宠汪汪邀请助力
 10 13-20/1 * * * node /scripts/jd_joy_run.js |ts >> /scripts/logs/jd_joy_run.log 2>&1
 # 摇钱树
@@ -59,7 +56,7 @@
 # 京豆变动通知
 20 10 * * * node /scripts/jd_bean_change.js |ts >> /scripts/logs/jd_bean_change.log 2>&1
 # 京东抽奖机
-31 0 * * * node /scripts/jd_lotteryMachine.js |ts >> /scripts/logs/jd_lotteryMachine.log 2>&1
+31 0,12,23 * * * node /scripts/jd_lotteryMachine.js |ts >> /scripts/logs/jd_lotteryMachine.log 2>&1
 # 京东排行榜
 21 9 * * * node /scripts/jd_rankingList.js |ts >> /scripts/logs/jd_rankingList.log 2>&1
 # 天天提鹅
@@ -122,4 +119,4 @@
 13 8,16,20 * * * node /scripts/jd_jxd.js |ts >> /scripts/logs/jd_jxd.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-25 16 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+8 7 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
