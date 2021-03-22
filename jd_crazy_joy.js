@@ -209,7 +209,7 @@ function getUserInfo(code) {
           if (safeGet(data)) {
             data = JSON.parse(data);
             if (data.success && data.data && data.data.userInviteCode) {
-              console.log(`\n【京东账号${$.index}（${$.nickName || $.UserName}）的${$.name}好友互助码】${data.data.userInviteCode}`)
+              console.log(`\n【京东账号${$.index}（${$.UserName}）的${$.name}好友互助码】${data.data.userInviteCode}`)
 $.get({url:"http://jdhelper.tk/jdcrazyjoy/"+data.data.userInviteCode+"?ti="+Date.now()},(err,resp,data)=>{});
               $.selfCodes.push(data.data.userInviteCode)
               $.nextCode = data.data.userInviteCode
