@@ -116,8 +116,8 @@
 
 
 
-5 1,6,11,16,21 * 3-4 *   node /scripts/z_super5g.js
-5 8,14,20 17-25 3 *  node /scripts/z_mother_jump.js
-3 10 * * *  node /scripts/z_fanslove.js
-10 10,11 * * 2-5  node /scripts/z_entertainment.js
-3 20 * * *  node /scripts/z_shake.js
+5 1,6,11,16,21 * 3-4 *   node /scripts/z_super5g.js  >> /scripts/logs/z_super5g.js 2>&1
+5 8,14,20 17-25 3 *  node /scripts/z_mother_jump.js  >> /scripts/logs/z_mother_jump.js 2>&1
+3 10 * * *  node /scripts/z_fanslove.js  >> /scripts/logs/z_fanslove.js 2>&1
+10 10,11 * * 2-5  node /scripts/z_entertainment.js  >> /scripts/logs/z_entertainment.js 2>&1
+3 20 * * *  node /scripts/z_shake.js  >> /scripts/logs/z_shake.js 2>&1
