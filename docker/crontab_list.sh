@@ -115,3 +115,9 @@
 13 8,16,20 * * * node /scripts/jd_jxd.js >> /scripts/logs/jd_jxd.log 2>&1
 
 
+
+5 1,6,11,16,21 * 3-4 *   node /scripts/z_super5g.js
+5 8,14,20 17-25 3 *  node /scripts/z_mother_jump.js
+3 10 * * *  node /scripts/z_fanslove.js
+10 10,11 * * 2-5  node /scripts/z_entertainment.js
+3 20 * * *  node /scripts/z_shake.js
