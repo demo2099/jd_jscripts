@@ -121,3 +121,6 @@
 3 10 * * *  node /scripts/z_fanslove.js  >> /scripts/logs/z_fanslove.js 2>&1
 10 10,11 * * 2-5  node /scripts/z_entertainment.js  >> /scripts/logs/z_entertainment.js 2>&1
 3 20 * * *  node /scripts/z_shake.js  >> /scripts/logs/z_shake.js 2>&1
+10 10 1-3 4 *  node /scripts/z_xmf.js  >> /scripts/logs/z_xmf.js 2>&1
+0 0 * * *  node /scripts/monk_inter_shop_sign.js  >> /scripts/logs/monk_inter_shop_sign.js 2>&1
+15 15 * * *  node /scripts/monk_shop_follow_sku.js  >> /scripts/logs/monk_shop_follow_sku.js 2>&1
