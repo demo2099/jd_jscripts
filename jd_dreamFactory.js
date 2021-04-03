@@ -613,6 +613,8 @@ $.get({url:"http://jdhelper.tk/jxfactory/"+data.user.encryptPin+"?ti="+Date.now(
                     }
                   }
                   // await exchangeProNotify()
+                } else {
+                  console.log(`\n\n预计最快还需 【${((production.needElectric - production.investedElectric) / (2 * 60 * 60 * 24)).toFixed(2)}天】生产完毕\n\n`)
                 }
               } else {
                 $.unActive = false;//标记是否开启了京喜活动或者选购了商品进行生产
