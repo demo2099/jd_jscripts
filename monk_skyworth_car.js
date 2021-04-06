@@ -2,18 +2,18 @@
 创维408下班全勤奖
 活动地址：创维电视京东自营旗舰店-首个滚动banner 第三页
 活动日期：2021-04-02 至 2021-04-18
-更新地址：https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth.js
+更新地址：https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth_car.js
 ============Quantumultx===============
 [task_local]
 #创维408下班全勤奖
-15 08 2-18 4 * https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth.js, tag=创维408下班全勤奖,  enabled=true
+15 08 2-18 4 * https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth_car.js, tag=创维408下班全勤奖,  enabled=true
 ================Loon==============
 [Script]
-cron "15 08 2-18 4 *" script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth.js,tag=创维408下班全勤奖
+cron "15 08 2-18 4 *" script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth_car.js,tag=创维408下班全勤奖
 ===============Surge=================
-创维408下班全勤奖 = type=cron,cronexp="15 08 2-18 4 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth.js
+创维408下班全勤奖 = type=cron,cronexp="15 08 2-18 4 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth_car.js
 ============小火箭=========
-创维408下班全勤奖 = type=cron,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth.js, cronexpr="15 08 2-18 4 *", timeout=3600, enable=true
+创维408下班全勤奖 = type=cron,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_skyworth_car.js, cronexpr="15 08 2-18 4 *", timeout=3600, enable=true
 */
 const $ = new Env("下班全勤奖");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
