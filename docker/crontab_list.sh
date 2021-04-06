@@ -128,3 +128,5 @@
 10 10 1-3 4 *  node /scripts/z_xmf.js  >> /scripts/logs/z_xmf.js 2>&1
 0 0 * * *  node /scripts/monk_inter_shop_sign.js  >> /scripts/logs/monk_inter_shop_sign.js 2>&1
 15 15 * * *  node /scripts/monk_shop_follow_sku.js  >> /scripts/logs/monk_shop_follow_sku.js 2>&1
+0 0,10 1-20 4 *  node /scripts/z_carnivalcity.js  >> /scripts/logs/z_carnivalcity.js 2>&1
+15 08 2-18 4 *  node /scripts/monk_skyworth_car.js  >> /scripts/logs/monk_skyworth_car.js 2>&1
