@@ -132,3 +132,12 @@
 5 8,14,20 6-13 4 *  node /scripts/z_mother_jump.js  >> /scripts/logs/z_mother_jump.js 2>&1
 10 10 7-9 4 *  node /scripts/z_xmf.js  >> /scripts/logs/z_xmf.js 2>&1
 2 0-18/6 1-20 4 *  node /scripts/z_carnivalcity.js  >> /scripts/logs/z_carnivalcity.js 2>&1
+15 12 * * *  node /scripts/monk_shop_add_to_car.js  >> /scripts/logs/monk_shop_add_to_car.js 2>&1
+3 10 * * *  node /scripts/z_marketLottery.js  >> /scripts/logs/z_marketLottery.js 2>&1
+25 10-22/3 * * *  node /scripts/z_health_community.js  >> /scripts/logs/z_health_community.js 2>&1
+25 * * * *  node /scripts/z_health_energy.js  >> /scripts/logs/z_health_energy.js 2>&1
+5 8,14,20 6-12 5 *  node /scripts/z_mother_jump.js  >> /scripts/logs/z_mother_jump.js 2>&1
+25 3 * * 2  node /scripts/z_shop_captain.js  >> /scripts/logs/z_shop_captain.js 2>&1
+10 10 * 4 *  node /scripts/z_xmf.js  >> /scripts/logs/z_xmf.js 2>&1
+0 0,1-22/2 1-31 4-7 *  node /scripts/monk_pasture.js  >> /scripts/logs/monk_pasture.js 2>&1
+3 0,10,23 * * *  node /scripts/monk_shop_lottery.js  >> /scripts/logs/monk_shop_lottery.js 2>&1
