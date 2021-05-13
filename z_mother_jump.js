@@ -9,14 +9,14 @@
 ============Quantumultx===============
 [task_local]
 #母婴-跳一跳
-5 8,14,20 6-12 5 * https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js, tag=母婴-跳一跳, enabled=true
+5 8,14,20 11-17 5 *  https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js, tag=母婴-跳一跳, enabled=true
 ================Loon==============
 [Script]
-cron "5 8,14,20 11-17 5 *" script-path=https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js,tag=母婴-跳一跳
+cron "5 8,14,20 11-17 5 *" script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js,tag=母婴-跳一跳
 ===============Surge=================
-母婴-跳一跳 = type=cron,cronexp="5 8,14,20 6-12 5 *",wake-system=1,timeout=3600,script-path=https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js
+母婴-跳一跳 = type=cron,cronexp="5 8,14,20 11-17 5 * ",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js
 ============小火箭=========
-母婴-跳一跳 = type=cron,script-path=https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js, cronexpr="5 8,14,20 6-12 5 *", timeout=3600, enable=true
+母婴-跳一跳 = type=cron,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js, cronexpr="5 8,14,20 11-17 5 * ", timeout=3600, enable=true
 */
 const $ = new Env('母婴跳一跳');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
