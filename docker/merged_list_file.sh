@@ -20,6 +20,8 @@
 
 #手机狂欢城
 0 0,12,18,21 * * * node /scripts/jd_carnivalcity.js |ts >> /scripts/logs/jd_carnivalcity.log 2>&1
+#618动物联萌
+13 0-23/2 * * * node /scripts/jd_zoo.js |ts >> /scripts/logs/jd_zoo.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js |ts >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -125,4 +127,4 @@
 15 0,12,22 * * * node /scripts/jd_jump.js |ts >> /scripts/logs/jd_jump.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-6 20 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+36 9 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
