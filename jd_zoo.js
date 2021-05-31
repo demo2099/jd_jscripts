@@ -9,7 +9,7 @@ PK互助：内部账号自行互助(排名靠前账号得到的机会多),多余
 地图任务：已添加，下午2点到5点执行,抽奖已添加(基本都是优惠券)
 金融APP任务：已完成
 活动时间：2021-05-24至2021-06-20
-脚本更新时间：2021-05-28 9:20
+脚本更新时间：2021-05-30 21:25
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ===================quantumultx================
 [task_local]
@@ -35,13 +35,11 @@ const pKHelpAuthorFlag = true;//是否助力作者PK  true 助力，false 不助
 let cookiesArr = [];
 $.cookie = '';
 $.inviteList = [];
-$.pkInviteList = [];
+$.pkInviteList = [
+  'sSKNX-MpqKOJsNu8mJ7RA9BJMup4tAAmPcPPPhBUWYKUJ19UKeC8EAoKeUXELi0o',
+];
 $.secretpInfo = {};
 $.innerPkInviteList = [
-  "sSKNX-MpqKOJsNv74MOnRO1-y24JzNJfEGle1Ooa7gtNStMf5n0b6pOxJ2-J",
-  "sSKNX-MpqKOJsNu-n83cV-ztwhdGVt6kY02nHU7jkp0qAsASu9tIW4Ny-i1OMVE",
-  'sSKNX-MpqKOJsNv74MOnRO1-y24JzNJfEGle1OoaqXcDhsX853imaYd8z8mCAw',
-  'sSKNX-MpqKOUsPHLzP-MQ8sgU5F_0euaHLKAIORNamvmoFcUYs6rpCt4',
 ];
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
@@ -66,7 +64,7 @@ if ($.isNode()) {
       '地图任务：已添加，下午2点到5点执行,抽奖已添加\n' +
       '金融APP任务：已完成\n' +
       '活动时间：2021-05-24至2021-06-20\n' +
-      '脚本更新时间：2021-05-28 9:20\n' +
+      '脚本更新时间：2021-05-30 21:25\n' +
       '火爆账户暂时不做任务，找到解决办法后再做任务'
       );
   for (let i = 0; i < cookiesArr.length; i++) {
@@ -87,16 +85,19 @@ if ($.isNode()) {
         }
         continue
       }
-      await zoo()
+      await zoo();
+      if($.hotFlag)$.secretpInfo[$.UserName] = false;//火爆账号不执行助力
     }
   }
-  let res = [], res2 = [];
+  let res = [], res2 = [], res3 = [];
+  res3 = await getAuthorShareCode('https://raw.githubusercontent.com/gitupdate/updateTeam/master/shareCodes/jd_zoo.json');
+  if (!res3) await getAuthorShareCode('https://cdn.jsdelivr.net/gh/gitupdate/updateTeam@master/shareCodes/jd_zoo.json')
   if (new Date().getUTCHours() + 8 >= 17) {
     res = await getAuthorShareCode() || [];
     res2 = await getAuthorShareCode('http://cdn.trueorfalse.top/e528ffae31d5407aac83b8c37a4c86bc/') || [];
   }
   if (pKHelpAuthorFlag) {
-    $.innerPkInviteList = getRandomArrayElements([...$.innerPkInviteList, ...res, ...res2], [...$.innerPkInviteList, ...res, ...res2].length);
+    $.innerPkInviteList = getRandomArrayElements([...$.innerPkInviteList, ...res, ...res2, ...res3], [...$.innerPkInviteList, ...res, ...res2, ...res3].length);
     $.pkInviteList.push(...$.innerPkInviteList);
   }
   for (let i = 0; i < cookiesArr.length; i++) {
@@ -861,9 +862,26 @@ function getRandomArrayElements(arr, count) {
 }
 function getAuthorShareCode(url = "http://cdn.annnibb.me/eb6fdc36b281b7d5eabf33396c2683a2.json") {
   return new Promise(async resolve => {
-    $.get({url,headers:{
+    const options = {
+      "url": `${url}?${new Date()}`,
+      "timeout": 10000,
+      "headers": {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
-      }, "timeout": 10000}, async (err, resp, data) => {
+      }
+    };
+    if ($.isNode() && process.env.TG_PROXY_HOST && process.env.TG_PROXY_PORT) {
+      const tunnel = require("tunnel");
+      const agent = {
+        https: tunnel.httpsOverHttp({
+          proxy: {
+            host: process.env.TG_PROXY_HOST,
+            port: process.env.TG_PROXY_PORT * 1
+          }
+        })
+      }
+      Object.assign(options, { agent })
+    }
+    $.get(options, async (err, resp, data) => {
       try {
         if (err) {
         } else {
