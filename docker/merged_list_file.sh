@@ -31,7 +31,7 @@
 0 1,22 * * * node /scripts/jd_gold_creator.js |ts >> /scripts/logs/jd_gold_creator.log 2>&1
 
 #京东沸腾之夜(5.31日有效)
-0 15-19/1 * * * node /scripts/jd_party_night.js |ts >> /scripts/logs/jd_party_night.log 2>&1
+55,0 15-23/1 * * * node /scripts/jd_party_night.js |ts >> /scripts/logs/jd_party_night.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js |ts >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -137,4 +137,4 @@
 15 0,12,22 * * * node /scripts/jd_jump.js |ts >> /scripts/logs/jd_jump.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-3 1 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+21 15 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
