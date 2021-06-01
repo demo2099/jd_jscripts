@@ -21,17 +21,16 @@
 #手机狂欢城
 0 0,12,18,21 * * * node /scripts/jd_carnivalcity.js |ts >> /scripts/logs/jd_carnivalcity.log 2>&1
 #618动物联萌
-33 * * * * node /scripts/jd_zoo.js |ts >> /scripts/logs/jd_zoo.log 2>&1
-
+33 0,6-23/2 * * * node /scripts/jd_zoo.js |ts >> /scripts/logs/jd_zoo.log 2>&1
+#618动物联萌专门收集金币(每小时的第30分运行一次)
+0-59/30 * * * * node /scripts/jd_zooCollect.js |ts >> /scripts/logs/jd_zooCollect.log 2>&1
 #家电星推官 活动时间：2021年5月27日 00:00:00-2021年6月18日 23:59:59
 0 0 * * * node /scripts/jd_xtg.js |ts >> /scripts/logs/jd_xtg.log 2>&1
-#家电星推官 活动时间：2021年5月27日 00:00:00-2021年6月18日 23:59:59
+#家电星推官好友互助 活动时间：2021年5月27日 00:00:00-2021年6月18日 23:59:59
 0 0 * * * node /scripts/jd_xtg_help.js |ts >> /scripts/logs/jd_xtg_help.log 2>&1
 #金榜创造营 活动时间：2021-05-21至2021-12-31
 0 1,22 * * * node /scripts/jd_gold_creator.js |ts >> /scripts/logs/jd_gold_creator.log 2>&1
 
-#京东沸腾之夜(5.31日有效)
-55,0 15-23/1 * * * node /scripts/jd_party_night.js |ts >> /scripts/logs/jd_party_night.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js |ts >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -137,4 +136,4 @@
 15 0,12,22 * * * node /scripts/jd_jump.js |ts >> /scripts/logs/jd_jump.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-21 15 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+46 9 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
