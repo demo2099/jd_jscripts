@@ -15,8 +15,6 @@
 
 #每日抽奖(活动时间：2021-05-01至2021-05-31)
 13 1,22,23 * * * node /scripts/jd_daily_lottery.js |ts >> /scripts/logs/jd_daily_lottery.log 2>&1
-#城城领现金
-33 * * * * node /scripts/jd_city.js |ts >> /scripts/logs/jd_city.log 2>&1
 
 #手机狂欢城
 0 0,12,18,21 * * * node /scripts/jd_carnivalcity.js |ts >> /scripts/logs/jd_carnivalcity.log 2>&1
@@ -108,9 +106,9 @@
 # 京喜app签到
 29 7 * * * node /scripts/jx_sign.js |ts >> /scripts/logs/jx_sign.log 2>&1
 # 闪购盲盒
-47 8 * * * node /scripts/jd_sgmh.js |ts >> /scripts/logs/jd_sgmh.log 2>&1
+47 8,22 * * * node /scripts/jd_sgmh.js |ts >> /scripts/logs/jd_sgmh.log 2>&1
 # 京东秒秒币
-10 6 * * * node /scripts/jd_ms.js |ts >> /scripts/logs/jd_ms.log 2>&1
+10 6,21 * * * node /scripts/jd_ms.js |ts >> /scripts/logs/jd_ms.log 2>&1
 #美丽研究院
 41 7,12,19 * * * node /scripts/jd_beauty.js |ts >> /scripts/logs/jd_beauty.log 2>&1
 #京东保价
@@ -139,4 +137,4 @@
 15 0,12,22 * * * node /scripts/jd_jump.js |ts >> /scripts/logs/jd_jump.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-47 10 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+8 19 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
