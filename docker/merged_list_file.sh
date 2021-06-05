@@ -139,4 +139,4 @@
 15 0,12,22 * * * node /scripts/jd_jump.js |ts >> /scripts/logs/jd_jump.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-48 15 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+46 3 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
