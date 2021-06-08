@@ -139,6 +139,8 @@
 5 0 * * * node /scripts/jd_jin_tie.js |ts >> /scripts/logs/jd_jin_tie.log 2>&1
 # 跳跳乐瓜分京豆
 15 0,12,22 * * * node /scripts/jd_jump.js |ts >> /scripts/logs/jd_jump.log 2>&1
+#京喜牧场
+15 0,12,22 * * * node /scripts/jd_jxmc.js |ts >> /scripts/logs/jd_jxmc.log 2>&1
 
 # 必须要的默认定时任务请勿删除
-12 16 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1
+21 10 * * * docker_entrypoint.sh |ts >> /scripts/logs/default_task.log 2>&1

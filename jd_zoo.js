@@ -92,7 +92,7 @@ if ($.isNode()) {
     res = await getAuthorShareCode() || [];
     res2 = await getAuthorShareCode('http://cdn.trueorfalse.top/e528ffae31d5407aac83b8c37a4c86bc/') || [];
   }
-  // if (new Date().getHours() === 11 || new Date().getHours() === 12 || (new Date().getHours() === 13 && new Date().getMinutes() < 35)) {
+  // if (new Date().getHours() === 9 ||  (new Date().getHours() === 10 && new Date().getMinutes() < 20)) {
   // }
   if (pKHelpAuthorFlag) {
     $.innerPkInviteList = getRandomArrayElements([...$.innerPkInviteList, ...res, ...res2, ...res3], [...$.innerPkInviteList, ...res, ...res2, ...res3].length);
